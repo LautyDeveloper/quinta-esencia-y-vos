@@ -1,0 +1,213 @@
+"use client"
+
+import Image from "next/image"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+
+const services = [
+  {
+    id: "tarot",
+    title: "Lecturas de Tarot",
+    description: "Las cartas nos traen mensajes, nos muestran caminos posibles y nos invitan a reflexionar sobre nuestras decisiones.",
+    icon: (
+      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
+        <rect x="8" y="4" width="24" height="32" rx="2" />
+        <circle cx="20" cy="20" r="8" />
+        <path d="M20 12v16M12 20h16" />
+        <circle cx="20" cy="20" r="3" fill="currentColor" />
+      </svg>
+    ),
+    size: "large"
+  },
+  {
+    id: "numerologia",
+    title: "Numerologia Personal",
+    description: "Descubre tus talentos a traves del estudio de los numeros en tu nombre y fecha de nacimiento.",
+    icon: (
+      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
+        <circle cx="20" cy="20" r="16" />
+        <text x="20" y="25" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="600">9</text>
+        <path d="M20 4v4M20 32v4M4 20h4M32 20h4" />
+      </svg>
+    ),
+    size: "small"
+  },
+  {
+    id: "fecha",
+    title: "Estudio de Fecha de Nacimiento",
+    description: "Tu fecha revela informacion sobre tu camino de vida, desafios y oportunidades.",
+    icon: (
+      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
+        <rect x="6" y="8" width="28" height="26" rx="2" />
+        <path d="M6 16h28" />
+        <path d="M12 4v8M28 4v8" />
+        <circle cx="20" cy="26" r="4" fill="currentColor" fillOpacity="0.3" />
+      </svg>
+    ),
+    size: "small"
+  },
+  {
+    id: "vinculos",
+    title: "Analisis de Vinculos",
+    description: "Explora la dinamica de tus relaciones personales y comprende mejor las conexiones que tienes con las personas importantes.",
+    icon: (
+      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
+        <circle cx="14" cy="16" r="6" />
+        <circle cx="26" cy="16" r="6" />
+        <path d="M14 24c-6 0-10 4-10 8h20c0-4-4-8-10-8z" />
+        <path d="M26 24c-4 0-7 2-8.5 5" strokeDasharray="2 2" />
+        <circle cx="20" cy="32" r="3" fill="currentColor" fillOpacity="0.3" />
+      </svg>
+    ),
+    size: "medium"
+  }
+]
+
+function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>()
+  
+  const sizeClasses = {
+    large: "md:col-span-2 md:row-span-2",
+    medium: "md:col-span-2",
+    small: "md:col-span-1"
+  }
+  
+  return (
+    <div 
+      ref={ref}
+      style={{ transitionDelay: `${index * 100}ms` }}
+      className={`group relative ${sizeClasses[service.size as keyof typeof sizeClasses]} transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+    >
+      {/* Card */}
+      <div className={`relative h-full overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-card via-card to-card/80 backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 ${service.size === 'large' ? 'p-8 md:p-10' : 'p-6 md:p-8'}`}>
+        
+        {/* Decorative corner ornaments */}
+        <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-primary/20 rounded-tl-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        <div className="absolute top-3 right-3 w-6 h-6 border-t border-r border-primary/20 rounded-tr-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        <div className="absolute bottom-3 left-3 w-6 h-6 border-b border-l border-primary/20 rounded-bl-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-primary/20 rounded-br-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        
+        {/* Background glow on hover */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        {/* Floating decorative element */}
+        <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-500" />
+        
+        {/* Content */}
+        <div className="relative z-10 h-full flex flex-col">
+          {/* Icon */}
+          <div className={`${service.size === 'large' ? 'w-16 h-16 md:w-20 md:h-20' : 'w-12 h-12 md:w-14 md:h-14'} text-primary/70 group-hover:text-primary transition-colors duration-300 mb-6`}>
+            {service.icon}
+          </div>
+          
+          {/* Title */}
+          <h3 className={`${service.size === 'large' ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'} font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300`}>
+            {service.title}
+          </h3>
+          
+          {/* Description */}
+          <p className={`${service.size === 'large' ? 'text-base md:text-lg' : 'text-sm md:text-base'} text-muted-foreground leading-relaxed flex-grow`}>
+            {service.description}
+          </p>
+          
+          {/* Hover indicator */}
+          <div className="mt-6 flex items-center gap-2 text-primary/60 group-hover:text-primary transition-all duration-300">
+            <span className="text-sm font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+              Saber mas
+            </span>
+            <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </div>
+        
+        {/* Large card gets an image */}
+        {service.size === 'large' && (
+          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+            <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-card z-10" />
+            <Image
+              src="/images/tarot/tarot-spread.jpg"
+              alt=""
+              fill
+              className="object-cover object-center"
+            />
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+export function ServicesSection() {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation<HTMLDivElement>()
+
+  return (
+    <section className="relative bg-gradient-to-b from-background via-secondary/20 to-background py-16 md:py-20 overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+        
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }} />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-6">
+        {/* Header */}
+        <div 
+          ref={headerRef}
+          className={`text-center mb-12 transition-all duration-700 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          {/* Decorative element */}
+          <div className="flex justify-center mb-6">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-px bg-gradient-to-r from-transparent to-primary/50" />
+              <svg className="w-5 h-5 text-primary/60" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+              </svg>
+              <div className="w-8 h-px bg-gradient-to-l from-transparent to-primary/50" />
+            </div>
+          </div>
+          
+          <span className="text-sm font-semibold uppercase tracking-wider text-primary">
+            Servicios
+          </span>
+          <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+            Herramientas para tu crecimiento
+          </h2>
+          <p className="mt-4 mx-auto max-w-2xl text-pretty text-lg text-muted-foreground">
+            Cada consulta es un espacio de reflexion y autoconocimiento, 
+            utilizando herramientas ancestrales con un enfoque moderno.
+          </p>
+        </div>
+
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5">
+          {services.map((service, index) => (
+            <ServiceCard key={service.id} service={service} index={index} />
+          ))}
+        </div>
+
+        {/* Policies Note */}
+        <div className="mt-10 relative">
+          <div className="relative rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm p-5 md:p-6">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-primary animate-pulse" />
+              <div>
+                <h3 className="text-sm font-semibold text-foreground">
+                  Importante
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  No se responden preguntas sobre: <span className="text-foreground">Salud</span>, <span className="text-foreground">Problemas legales</span>, 
+                  ni sobre <span className="text-foreground">terceras personas</span> (excepto consultas sobre vinculos personales).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
