@@ -164,27 +164,11 @@ export default function PropuestaPage() {
 
       <SectionDivider />
 
-      {/* Services Section - Clean Layout with Standalone Background */}
-      <section className="relative py-24 md:py-32 px-6 overflow-hidden">
+      {/* Services Section - Balanced Layout: Large Image + Stacked Cards */}
+      <section className="relative py-16 md:py-20 px-6 overflow-hidden">
 
-        {/* Mystical Background Image - Standalone Decorative Element */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-          <div className="relative w-full h-full max-w-[1400px] max-h-[900px] opacity-20">
-            <Image
-              src="/images/mystical-card-border.png"
-              alt=""
-              fill
-              className="object-contain"
-            />
-          </div>
-        </div>
-
-        {/* Ambient Glow Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent -z-10" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full -z-10" />
-
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">La Experiencia</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
               Cada sesión es diseñada meticulosamente para brindarte claridad y empoderamiento.
@@ -193,22 +177,86 @@ export default function PropuestaPage() {
 
           <div
             ref={servicesRef}
-            className={`grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10 transition-all duration-1000 ${servicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 transition-all duration-1000 ${servicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
-            {services.map((service, index) => (
+            {/* Left Side - Large Mystical Image Card */}
+            <div
+              className="transition-all duration-700 ease-out hover:scale-[1.02] hover:z-10"
+              style={{
+                animationDelay: '0ms',
+                opacity: servicesVisible ? 1 : 0,
+                transform: servicesVisible ? 'translateX(0)' : 'translateX(-30px)',
+                transition: 'all 0.8s ease-out 0ms'
+              }}
+            >
+              <div className="relative h-full min-h-[420px] lg:min-h-[500px] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-2xl hover:border-primary/40 hover:shadow-[0_0_50px_-10px_hsl(var(--primary)/0.4)] transition-all duration-500">
+                <Image
+                  src="/images/mystical-card-border.png"
+                  alt="Lecturas de Tarot"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+
+                {/* Content Overlay */}
+                <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                  <div className="space-y-3">
+                    <div className="w-14 h-14 rounded-full bg-background/90 backdrop-blur-sm border border-primary/20 flex items-center justify-center mb-3">
+                      <Sparkles className="w-7 h-7 text-primary" />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-serif text-foreground">Lecturas de Tarot</h3>
+                    <p className="text-muted-foreground text-sm md:text-base max-w-md">
+                      Las cartas nos traen mensajes, nos muestran caminos posibles y nos invitan a reflexionar sobre nuestras decisiones.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Decorative corner accent */}
+                <div className="absolute top-6 right-6 w-12 h-12 border-r-2 border-t-2 border-primary/30 rounded-tr-lg" />
+              </div>
+            </div>
+
+            {/* Right Side - Two Service Cards Stacked */}
+            <div className="flex flex-col gap-5 md:gap-6">
+              {/* Card 1 - Top */}
               <div
-                key={index}
-                className="w-full transition-all duration-500 ease-out hover:scale-105 hover:-translate-y-2"
+                className="transition-all duration-500 ease-out hover:scale-[1.02] hover:-translate-y-1 hover:z-10"
                 style={{
-                  animationDelay: `${service.delay}ms`,
+                  animationDelay: '150ms',
                   opacity: servicesVisible ? 1 : 0,
-                  transform: servicesVisible ? 'translateY(0)' : 'translateY(20px)',
-                  transition: `all 0.6s ease-out ${service.delay}ms`
+                  transform: servicesVisible ? 'translateX(0)' : 'translateX(30px)',
+                  transition: 'all 0.6s ease-out 150ms'
                 }}
               >
-                <ServiceCard service={service} index={index} />
+                <ServiceCard service={services[0]} index={0} />
               </div>
-            ))}
+
+              {/* Card 2 - Bottom */}
+              <div
+                className="transition-all duration-500 ease-out hover:scale-[1.02] hover:-translate-y-1 hover:z-10"
+                style={{
+                  animationDelay: '300ms',
+                  opacity: servicesVisible ? 1 : 0,
+                  transform: servicesVisible ? 'translateX(0)' : 'translateX(30px)',
+                  transition: 'all 0.6s ease-out 300ms'
+                }}
+              >
+                <ServiceCard service={services[1]} index={1} />
+              </div>
+            </div>
+          </div>
+
+          {/* Third Card - Full Width Below */}
+          <div
+            className="mt-5 md:mt-6 transition-all duration-500 ease-out hover:scale-[1.01] hover:-translate-y-1"
+            style={{
+              animationDelay: '450ms',
+              opacity: servicesVisible ? 1 : 0,
+              transform: servicesVisible ? 'translateY(0)' : 'translateY(30px)',
+              transition: 'all 0.6s ease-out 450ms'
+            }}
+          >
+            <ServiceCard service={services[2]} index={2} />
           </div>
         </div>
       </section>

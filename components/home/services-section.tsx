@@ -23,11 +23,7 @@ const services = [
     title: "Numerologia Personal",
     description: "Descubre tus talentos a traves del estudio de los numeros en tu nombre y fecha de nacimiento.",
     icon: (
-      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
-        <circle cx="20" cy="20" r="16" />
-        <text x="20" y="25" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="600">9</text>
-        <path d="M20 4v4M20 32v4M4 20h4M32 20h4" />
-      </svg>
+      <img src="images/nueve.png" alt="" />
     ),
     size: "small"
   },
@@ -36,12 +32,7 @@ const services = [
     title: "Estudio de Fecha de Nacimiento",
     description: "Tu fecha revela informacion sobre tu camino de vida, desafios y oportunidades.",
     icon: (
-      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
-        <rect x="6" y="8" width="28" height="26" rx="2" />
-        <path d="M6 16h28" />
-        <path d="M12 4v8M28 4v8" />
-        <circle cx="20" cy="26" r="4" fill="currentColor" fillOpacity="0.3" />
-      </svg>
+      <img src="images/calendario.png" alt="" />
     ),
     size: "small"
   },
@@ -50,13 +41,8 @@ const services = [
     title: "Analisis de Vinculos",
     description: "Explora la dinamica de tus relaciones personales y comprende mejor las conexiones que tienes con las personas importantes.",
     icon: (
-      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
-        <circle cx="14" cy="16" r="6" />
-        <circle cx="26" cy="16" r="6" />
-        <path d="M14 24c-6 0-10 4-10 8h20c0-4-4-8-10-8z" />
-        <path d="M26 24c-4 0-7 2-8.5 5" strokeDasharray="2 2" />
-        <circle cx="20" cy="32" r="3" fill="currentColor" fillOpacity="0.3" />
-      </svg>
+      <img src="images/calendario.png" alt="" />
+
     ),
     size: "medium"
   }
@@ -114,7 +100,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col">
           {/* Icon */}
-          <div className={`${isLarge ? 'w-16 h-16 md:w-20 md:h-20 text-white/90' : 'w-12 h-12 md:w-14 md:h-14 text-primary/70'} group-hover:text-primary transition-colors duration-300 mb-6`}>
+          <div className={`${isLarge ? 'w-16 h-16 md:w-20 md:h-20 text-white/90' : 'w-12 h-12 md:w-14 md:h-14 text-primary/70 [&>img]:drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]'} group-hover:text-primary transition-colors duration-300 mb-6`}>
             {service.icon}
           </div>
 
