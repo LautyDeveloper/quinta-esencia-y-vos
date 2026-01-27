@@ -8,7 +8,7 @@ export function AboutSection() {
   const { ref: numRef, isVisible: numVisible } = useScrollAnimation<HTMLDivElement>()
 
   return (
-    <section className="relative py-14 md:py-16 overflow-hidden">
+    <section className="relative py-12 md:py-14 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
@@ -17,7 +17,7 @@ export function AboutSection() {
 
       <div className="relative mx-auto max-w-6xl px-6">
         {/* Tarot Section */}
-        <div 
+        <div
           ref={tarotRef}
           className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-14 transition-all duration-1000 ${tarotVisible ? 'opacity-100' : 'opacity-0'}`}
         >
@@ -31,18 +31,18 @@ export function AboutSection() {
             </h2>
             <div className="mt-5 space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
               <p>
-                El tarot no predice el futuro de forma determinante. Es una herramienta 
-                de reflexion que nos ayuda a ver con mayor claridad las situaciones 
+                El tarot no predice el futuro de forma determinante. Es una herramienta
+                de reflexion que nos ayuda a ver con mayor claridad las situaciones
                 que atravesamos.
               </p>
               <p>
-                Cada carta es un arquetipo, una energia universal que resuena con 
-                nuestras experiencias personales. Al interpretar los arcanos, 
+                Cada carta es un arquetipo, una energia universal que resuena con
+                nuestras experiencias personales. Al interpretar los arcanos,
                 abrimos un dialogo con nuestra intuicion mas profunda.
               </p>
               <p>
-                Las sesiones duran aproximadamente <strong className="text-foreground">1 hora</strong> y se realizan 
-                de manera <strong className="text-foreground">online</strong>, creando un espacio intimo y comodo 
+                Las sesiones duran aproximadamente <strong className="text-foreground">1 hora</strong> y se realizan
+                de manera <strong className="text-foreground">online</strong>, creando un espacio intimo y comodo
                 para la consulta.
               </p>
             </div>
@@ -67,7 +67,7 @@ export function AboutSection() {
         </div>
 
         {/* Numerology Section */}
-        <div 
+        <div
           ref={numRef}
           className={`mt-16 md:mt-20 grid items-center gap-10 lg:grid-cols-2 lg:gap-14 transition-all duration-1000 ${numVisible ? 'opacity-100' : 'opacity-0'}`}
         >
@@ -82,11 +82,11 @@ export function AboutSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
-            
+
             {/* Floating numbers decoration */}
             <div className="absolute -top-3 -right-3 grid grid-cols-3 gap-1.5">
               {[1, 2, 3].map((num, i) => (
-                <div 
+                <div
                   key={num}
                   className="w-10 h-10 rounded-lg bg-card/80 backdrop-blur-sm border border-primary/20 flex items-center justify-center shadow-lg animate-float"
                   style={{ animationDelay: `${i * 0.2}s` }}
@@ -107,12 +107,12 @@ export function AboutSection() {
             </h2>
             <div className="mt-5 space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
               <p>
-                Cada numero tiene una vibracion unica y un significado profundo. 
-                Tu nombre y fecha de nacimiento contienen informacion valiosa sobre 
+                Cada numero tiene una vibracion unica y un significado profundo.
+                Tu nombre y fecha de nacimiento contienen informacion valiosa sobre
                 tus talentos, desafios y proposito de vida.
               </p>
               <p>
-                A traves del estudio numerologico, podemos identificar patrones, 
+                A traves del estudio numerologico, podemos identificar patrones,
                 ciclos personales y areas de oportunidad para tu desarrollo personal.
               </p>
             </div>
@@ -130,7 +130,7 @@ export function AboutSection() {
                 { num: 8, meaning: "Abundancia" },
                 { num: 9, meaning: "Humanidad" }
               ].map(({ num, meaning }, i) => (
-                <div 
+                <div
                   key={num}
                   className="group flex flex-col items-center justify-center rounded-lg border border-border bg-card/50 backdrop-blur-sm p-2.5 transition-all hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5"
                   style={{ transitionDelay: `${i * 30}ms` }}

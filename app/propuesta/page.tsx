@@ -1,206 +1,260 @@
 "use client"
 
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Clock, Video, Shield, Check } from "lucide-react"
+import { Clock, Video, Shield, Check, Star, Sparkles, Moon } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const WHATSAPP_NUMBER = "5491100000000"
 const WHATSAPP_MESSAGE = "Hola! Me gustaria agendar una consulta de tarot/numerologia."
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
-const features = [
+const services = [
   {
     icon: Clock,
-    title: "1 hora de sesion",
-    description: "Tiempo suficiente para una lectura profunda y significativa, con espacio para tus preguntas."
+    title: "1 hora de sesión",
+    description: "Tiempo dedicado exclusivamente a ti, para profundizar en cada mensaje de las cartas.",
+    delay: 0
   },
   {
     icon: Video,
-    title: "Consulta online",
-    description: "Desde la comodidad de tu hogar, a traves de videollamada en la plataforma de tu preferencia."
+    title: "Consulta Online",
+    description: "Conéctate desde tu espacio sagrado. La energía fluye sin importar la distancia.",
+    delay: 150,
+    featured: true // Middle card
   },
   {
     icon: Shield,
-    title: "Espacio seguro",
-    description: "Un ambiente de confidencialidad y respeto donde puedes explorar sin juicios."
+    title: "Espacio Seguro",
+    description: "Confidencialidad absoluta. Un refugio para explorar tus luces y sombras sin juicio.",
+    delay: 300
   }
 ]
 
 const included = [
-  "Lectura completa de tarot o estudio numerologico",
-  "Interpretacion personalizada segun tu situacion",
-  "Espacio para preguntas y reflexion",
-  "Herramientas practicas para aplicar en tu vida",
-  "Grabacion de la sesion (opcional)"
+  "Lectura de Tarot / Numerología",
+  "Análisis de patrones y bloqueos",
+  "Consejos prácticos y rituales",
+  "Grabación de la sesión (opcional)",
+  "Seguimiento post-consulta"
 ]
 
-function FeatureCard({ feature, index }: { feature: typeof features[0]; index: number }) {
-  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>()
-  
+function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
   return (
-    <div 
-      ref={ref}
-      style={{ transitionDelay: `${index * 100}ms` }}
-      className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-    >
-      <Card className="h-full border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-        <CardHeader>
-          <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground">
-            <feature.icon className="h-7 w-7" />
+    <div className="relative group h-full">
+      {/* Card Container - Solid Physical Look */}
+      <div className="relative h-full min-h-[380px] w-full overflow-hidden rounded-xl bg-card/95 backdrop-blur-sm shadow-2xl transition-all duration-500 border border-primary/10 group-hover:border-primary/40 group-hover:shadow-[0_0_40px_-10px_hsl(var(--primary)/0.2)]">
+
+        {/* Subtle Texture Background */}
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+
+        {/* Shine Effect */}
+        <div className="absolute inset-0 z-20 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 -inset-full h-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent to-white/10 opacity-0 group-hover:animate-shine" />
+        </div>
+
+        {/* Content Container - Centered within the frame */}
+        <div className="relative z-30 h-full flex flex-col items-center justify-center p-8 text-center pt-10 pb-12">
+
+          {/* Icon Container - Glowing Indicator */}
+          <div className="mb-8 relative group-hover:scale-110 transition-transform duration-500">
+            <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative bg-background rounded-full p-4 border border-primary/20 shadow-lg">
+              <service.icon className="h-8 w-8 text-primary" />
+            </div>
           </div>
-          <CardTitle className="text-xl">{feature.title}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground">{feature.description}</p>
-        </CardContent>
-      </Card>
+
+          {/* Title with ornamental dividers */}
+          <div className="mb-4 flex flex-col items-center gap-3">
+            <span className="text-2xl font-serif text-foreground tracking-wide font-medium">{service.title}</span>
+            <div className="w-8 h-0.5 bg-primary/30 rounded-full" />
+          </div>
+
+          <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+            {service.description}
+          </p>
+
+          {/* Bottom detail */}
+          <div className="mt-auto opacity-60 group-hover:opacity-100 transition-all duration-500">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-primary">Detalles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function SectionDivider() {
+  return (
+    <div className="flex justify-center items-center py-12 opacity-60">
+      <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      <div className="relative w-12 h-12 mx-4">
+        <Image src="/images/esoteric-divider.png" alt="" fill className="object-contain" />
+      </div>
+      <div className="h-px w-24 bg-gradient-to-l from-transparent via-primary/50 to-transparent" />
     </div>
   )
 }
 
 export default function PropuestaPage() {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation<HTMLDivElement>()
+  const { ref: servicesRef, isVisible: servicesVisible } = useScrollAnimation<HTMLDivElement>()
   const { ref: includedRef, isVisible: includedVisible } = useScrollAnimation<HTMLDivElement>()
-  const { ref: notesRef, isVisible: notesVisible } = useScrollAnimation<HTMLDivElement>()
 
   return (
-    <>
-      {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+    <div className="overflow-x-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 z-0">
           <Image
             src="/images/propuesta-hero.jpg"
-            alt=""
+            alt="Hero Background"
             fill
-            className="object-cover"
+            className="object-cover opacity-60"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/40 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+
+          {/* Grain Overlay */}
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 400 400\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }} />
         </div>
 
-        {/* Floating particles */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1.5 h-1.5 rounded-full bg-primary/40 animate-float"
-              style={{
-                left: `${10 + i * 12}%`,
-                top: `${15 + (i % 4) * 20}%`,
-                animationDelay: `${i * 0.3}s`,
-                animationDuration: `${5 + i * 0.5}s`
-              }}
-            />
-          ))}
-        </div>
+        <div ref={heroRef} className={`relative z-10 max-w-4xl px-6 text-center transition-all duration-1000 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-6 animate-pulse">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-xs uppercase tracking-[0.2em] text-primary/80">Propuesta Exclusiva</span>
+            <Sparkles className="w-4 h-4 text-primary" />
+          </div>
 
-        <div ref={heroRef} className="relative mx-auto max-w-6xl px-6 py-24">
-          <div className={`max-w-2xl transition-all duration-1000 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-background/80 backdrop-blur-sm px-5 py-2.5">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              <span className="text-sm font-medium text-foreground">
-                Mi Propuesta
-              </span>
-            </div>
-            <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              Un espacio para tu{" "}
-              <span className="text-primary">crecimiento personal</span>
-            </h1>
-            <p className="mt-6 text-pretty text-lg text-muted-foreground md:text-xl">
-              Las consultas son un encuentro intimo donde utilizamos el tarot y la numerologia 
-              como herramientas para la reflexion, el autoconocimiento y la toma de decisiones.
-            </p>
-            <Button 
-              asChild 
-              size="lg" 
-              className="mt-8 gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all hover:scale-105"
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-foreground mb-8">
+            <span className="block text-primary/90 drop-shadow-sm">El Espejo</span>
+            <span className="block font-light italic">del Alma</span>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Un espacio atemporal donde el tarot y la numerología dialogan para revelar tu verdad interior.
+          </p>
+
+          <div className="mt-12 flex flex-col md:flex-row gap-6 justify-center items-center">
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full px-8 h-14 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all transform hover:-translate-y-1 text-lg"
             >
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-                Agenda tu consulta
+                Agendar ahora
               </a>
             </Button>
+            <span className="text-sm text-muted-foreground/60 uppercase tracking-widest">o descubre más abajo</span>
           </div>
+        </div>
+
+        {/* Decorative Floating Elements */}
+        <div className="absolute top-1/4 left-10 animate-float opacity-20">
+          <Moon className="w-12 h-12 text-primary" />
+        </div>
+        <div className="absolute bottom-1/4 right-10 animate-float-delayed opacity-20">
+          <Star className="w-8 h-8 text-primary" />
         </div>
       </section>
 
-      {/* Features */}
-      <section className="bg-secondary/30 py-24 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <SectionDivider />
+
+      {/* Services Section - Clean Layout with Standalone Background */}
+      <section className="relative py-24 md:py-32 px-6 overflow-hidden">
+
+        {/* Mystical Background Image - Standalone Decorative Element */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+          <div className="relative w-full h-full max-w-[1400px] max-h-[900px] opacity-20">
+            <Image
+              src="/images/mystical-card-border.png"
+              alt=""
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
-        <div className="relative mx-auto max-w-6xl px-6">
-          <div className="grid gap-6 md:grid-cols-3">
-            {features.map((feature, index) => (
-              <FeatureCard key={feature.title} feature={feature} index={index} />
+
+        {/* Ambient Glow Effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full -z-10" />
+
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">La Experiencia</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Cada sesión es diseñada meticulosamente para brindarte claridad y empoderamiento.
+            </p>
+          </div>
+
+          <div
+            ref={servicesRef}
+            className={`grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10 transition-all duration-1000 ${servicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          >
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="w-full transition-all duration-500 ease-out hover:scale-105 hover:-translate-y-2"
+                style={{
+                  animationDelay: `${service.delay}ms`,
+                  opacity: servicesVisible ? 1 : 0,
+                  transform: servicesVisible ? 'translateY(0)' : 'translateY(20px)',
+                  transition: `all 0.6s ease-out ${service.delay}ms`
+                }}
+              >
+                <ServiceCard service={service} index={index} />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What's Included */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
-        </div>
-        <div className="relative mx-auto max-w-6xl px-6">
-          <div ref={includedRef} className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className={`transition-all duration-700 ${includedVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-              <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-                La Consulta
-              </span>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-                Que incluye cada sesion?
+      <SectionDivider />
+
+      {/* Included Section */}
+      <section className="py-12 md:py-16 relative">
+        <div ref={includedRef} className="max-w-6xl mx-auto px-6">
+          <div className={`flex flex-col lg:flex-row gap-16 items-center transition-all duration-1000 ${includedVisible ? 'opacity-100' : 'opacity-0'}`}>
+
+            {/* Left Content */}
+            <div className="flex-1 space-y-8">
+              <h2 className="text-4xl md:text-5xl font-serif leading-tight">
+                <span className="text-primary italic">Incluido</span> en tu<br />
+                camino de descubrimiento
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Cada consulta es unica porque tu eres unico. Sin embargo, hay elementos 
-                que siempre estan presentes para garantizar una experiencia valiosa.
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Nuestra propuesta va más allá de una simple lectura. Es un proceso integral diseñado para que te lleves herramientas tangibles.
               </p>
-              <ul className="mt-8 space-y-4">
+
+              <ul className="space-y-6">
                 {included.map((item, i) => (
-                  <li 
-                    key={item} 
-                    className={`flex items-start gap-3 transition-all duration-500`}
-                    style={{ transitionDelay: `${i * 100 + 200}ms` }}
-                  >
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Check className="h-4 w-4" />
+                  <li key={i} className="flex items-center gap-4 group">
+                    <div className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center bg-secondary/30 group-hover:bg-primary/10 transition-colors">
+                      <Check className="w-5 h-5 text-primary" />
                     </div>
-                    <span className="text-foreground">{item}</span>
+                    <span className="text-lg font-light">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className={`transition-all duration-700 delay-200 ${includedVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-              <div className="rounded-2xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 shadow-xl">
-                <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-                  Tipos de Consulta
-                </span>
-                <div className="mt-6 space-y-4">
-                  {[
-                    { title: "Lectura de Tarot", desc: "Exploracion de tu situacion actual, posibilidades y caminos a traves de los arcanos." },
-                    { title: "Estudio Numerologico", desc: "Analisis profundo de tu nombre y fecha de nacimiento para revelar talentos y ciclos personales." },
-                    { title: "Consulta Combinada", desc: "Una sesion que integra ambas herramientas para una vision mas completa." }
-                  ].map((type, i) => (
-                    <div 
-                      key={type.title}
-                      className="rounded-xl border border-border bg-secondary/50 p-5 transition-all hover:border-primary/30 hover:shadow-md hover:-translate-y-0.5"
-                      style={{ transitionDelay: `${i * 100}ms` }}
-                    >
-                      <h3 className="text-lg font-semibold text-foreground">{type.title}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">{type.desc}</p>
-                    </div>
-                  ))}
+            {/* Right Visual */}
+            <div className="flex-1 relative">
+              <div className="relative aspect-square max-w-md mx-auto">
+                {/* Decorative circles */}
+                <div className="absolute inset-0 border border-primary/20 rounded-full animate-[spin_10s_linear_infinite]" />
+                <div className="absolute inset-4 border border-dashed border-primary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-64 h-64 bg-secondary/80 backdrop-blur-xl rounded-full flex flex-col items-center justify-center text-center p-6 border border-primary/10 shadow-2xl relative overflow-hidden group hover:scale-105 transition-transform duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <span className="text-5xl font-serif text-primary mb-2">1h</span>
+                    <span className="text-sm uppercase tracking-widest text-muted-foreground">Sesión<br />Completa</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -208,77 +262,35 @@ export default function PropuestaPage() {
         </div>
       </section>
 
-      {/* Important Notes */}
-      <section className="bg-secondary/30 py-24 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
-        </div>
-        <div ref={notesRef} className="relative mx-auto max-w-6xl px-6">
-          <div className={`mx-auto max-w-3xl transition-all duration-700 ${notesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-              Importante
-            </span>
-            <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-              Lo que debes saber
-            </h2>
-            <div className="mt-8 space-y-6 text-lg text-muted-foreground">
-              <p>
-                Las consultas de tarot y numerologia son <strong className="text-foreground">herramientas de reflexion 
-                y autoconocimiento</strong>. No reemplazan el consejo profesional en areas especificas.
-              </p>
-              <div className="rounded-2xl border border-border bg-card/50 backdrop-blur-sm p-6 shadow-lg">
-                <h3 className="font-semibold text-foreground flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
-                  No se responden preguntas sobre:
-                </h3>
-                <ul className="mt-4 space-y-3">
-                  {[
-                    "Temas de salud (consulta siempre a profesionales medicos)",
-                    "Problemas legales (acude a abogados especializados)",
-                    "Terceras personas (excepto consultas sobre vinculos)"
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-destructive/60" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p>
-                Esto no es una limitacion, es un compromiso con la etica y con tu bienestar. 
-                Las cartas y los numeros nos hablan de ti y de tu camino.
-              </p>
-            </div>
+      <SectionDivider />
+
+      {/* Important Info & CTA */}
+      <section className="py-12 md:py-16 pb-24 md:pb-32">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="bg-secondary/20 border border-primary/10 rounded-3xl p-8 md:p-12 backdrop-blur-sm relative overflow-hidden">
+            {/* Background pattern */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+
+            <h3 className="text-2xl font-serif mb-6 flex items-center justify-center gap-3">
+              <Shield className="w-6 h-6 text-primary" />
+              Nota Importante
+            </h3>
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Las lecturas son herramientas de orientación. No reemplazan diagnósticos médicos, asesoría legal ni psicológica profesional.
+            </p>
+
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full bg-foreground text-background hover:bg-foreground/90 px-8 text-lg"
+            >
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                Comenzar mi Viaje
+              </a>
+            </Button>
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-        </div>
-        <div className="relative mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-            Listo para comenzar?
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Agenda tu consulta y comienza tu viaje de autoconocimiento.
-          </p>
-          <Button 
-            asChild 
-            size="lg" 
-            className="mt-8 gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all hover:scale-105"
-          >
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              Agendar por WhatsApp
-            </a>
-          </Button>
-        </div>
-      </section>
-    </>
+    </div>
   )
 }
