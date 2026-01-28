@@ -6,10 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Clock, Video, Shield, Check, Star, Sparkles, Moon } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-
-const WHATSAPP_NUMBER = "5491100000000"
-const WHATSAPP_MESSAGE = "Hola! Me gustaria agendar una consulta de tarot/numerologia."
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
+import { WHATSAPP_URL } from "@/lib/constants"
+import { MysticalDivider } from "@/components/mystical-elements"
 
 const services = [
   {
@@ -84,12 +82,8 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 
 function SectionDivider() {
   return (
-    <div className="flex justify-center items-center py-12 opacity-60">
-      <div className="h-px w-24 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-      <div className="relative w-12 h-12 mx-4">
-        <Image src="/images/esoteric-divider.png" alt="" fill className="object-contain" />
-      </div>
-      <div className="h-px w-24 bg-gradient-to-l from-transparent via-primary/50 to-transparent" />
+    <div className="py-12 opacity-60">
+      <MysticalDivider />
     </div>
   )
 }
