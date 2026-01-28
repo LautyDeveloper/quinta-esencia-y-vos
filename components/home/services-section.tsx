@@ -23,7 +23,7 @@ const services = [
     title: "Numerologia Personal",
     description: "Descubre tus talentos a traves del estudio de los numeros en tu nombre y fecha de nacimiento.",
     icon: (
-      <img src="images/nueve.png" alt="" />
+      <img src="images/nueve.png" alt="" className="rounded-full" />
     ),
     size: "small"
   },
@@ -32,7 +32,7 @@ const services = [
     title: "Estudio de Fecha de Nacimiento",
     description: "Tu fecha revela informacion sobre tu camino de vida, desafios y oportunidades.",
     icon: (
-      <img src="images/calendario.png" alt="" />
+      <img src="images/calendario.png" alt="" className="rounded-full" />
     ),
     size: "small"
   },
@@ -41,7 +41,7 @@ const services = [
     title: "Analisis de Vinculos",
     description: "Explora la dinamica de tus relaciones personales y comprende mejor las conexiones que tienes con las personas importantes.",
     icon: (
-      <img src="images/calendario.png" alt="" />
+      <img src="images/vinculos.png" alt="" className="rounded-full" />
 
     ),
     size: "medium"
@@ -100,7 +100,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col">
           {/* Icon */}
-          <div className={`${isLarge ? 'w-16 h-16 md:w-20 md:h-20 text-white/90' : 'w-12 h-12 md:w-14 md:h-14 text-primary/70 [&>img]:drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)]'} group-hover:text-primary transition-colors duration-300 mb-6`}>
+          <div className={`${isLarge ? 'w-16 h-16 md:w-20 md:h-20 text-white/90' : 'w-12 h-12 md:w-14 md:h-14 text-primary/70'} group-hover:text-primary transition-colors duration-500 mb-6 [&>img]:drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)] [&>img]:group-hover:drop-shadow-[0_0_12px_rgba(147,51,234,0.5),0_0_20px_rgba(59,130,246,0.3),0_0_30px_rgba(99,102,241,0.2)] [&>img]:transition-all [&>img]:duration-1000`}>
             {service.icon}
           </div>
 
