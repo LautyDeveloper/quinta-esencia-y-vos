@@ -13,20 +13,20 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent
 
 const services = [
   {
-    icon: Clock,
+    icon: "/images/reloj.png",
     title: "1 hora de sesión",
     description: "Tiempo dedicado exclusivamente a ti, para profundizar en cada mensaje de las cartas.",
     delay: 0
   },
   {
-    icon: Video,
+    icon: "/images/camara.png",
     title: "Consulta Online",
     description: "Conéctate desde tu espacio sagrado. La energía fluye sin importar la distancia.",
     delay: 150,
     featured: true // Middle card
   },
   {
-    icon: Shield,
+    icon: "Shield",
     title: "Espacio Seguro",
     description: "Confidencialidad absoluta. Un refugio para explorar tus luces y sombras sin juicio.",
     delay: 300
@@ -45,7 +45,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
   return (
     <div className="relative group h-full">
       {/* Card Container - Solid Physical Look */}
-      <div className="relative h-full min-h-[380px] w-full overflow-hidden rounded-xl bg-card/95 backdrop-blur-sm shadow-2xl transition-all duration-500 border border-primary/10 group-hover:border-primary/40 group-hover:shadow-[0_0_40px_-10px_hsl(var(--primary)/0.2)]">
+      <div className="relative h-full min-h-[260px] w-full overflow-hidden rounded-xl bg-card/95 backdrop-blur-sm shadow-2xl transition-all duration-500 border border-primary/10 group-hover:border-primary/40 group-hover:shadow-[0_0_40px_-10px_hsl(var(--primary)/0.2)]">
 
         {/* Subtle Texture Background */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
@@ -56,13 +56,13 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         </div>
 
         {/* Content Container - Centered within the frame */}
-        <div className="relative z-30 h-full flex flex-col items-center justify-center p-8 text-center pt-10 pb-12">
+        <div className="relative z-30 h-full flex flex-col items-center justify-center p-6 text-center">
 
           {/* Icon Container - Glowing Indicator */}
           <div className="mb-8 relative group-hover:scale-110 transition-transform duration-500">
             <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative bg-background rounded-full p-4 border border-primary/20 shadow-lg">
-              <service.icon className="h-8 w-8 text-primary" />
+              {service.icon.startsWith('/') ? <Image src={service.icon} alt="" width={60} height={60} className="text-primary rounded-full" /> : <service.icon className="h-8 w-8 text-primary" />}
             </div>
           </div>
 
@@ -76,10 +76,6 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
             {service.description}
           </p>
 
-          {/* Bottom detail */}
-          <div className="mt-auto opacity-60 group-hover:opacity-100 transition-all duration-500">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-primary">Detalles</span>
-          </div>
         </div>
       </div>
     </div>
@@ -167,7 +163,7 @@ export default function PropuestaPage() {
       {/* Services Section - Balanced Layout: Large Image + Stacked Cards */}
       <section className="relative py-16 md:py-20 px-6 overflow-hidden">
 
-        <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="relative z-10 max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">La Experiencia</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
@@ -189,7 +185,7 @@ export default function PropuestaPage() {
                 transition: 'all 0.8s ease-out 0ms'
               }}
             >
-              <div className="relative h-full min-h-[420px] lg:min-h-[500px] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-2xl hover:border-primary/40 hover:shadow-[0_0_50px_-10px_hsl(var(--primary)/0.4)] transition-all duration-500">
+              <div className="relative h-full min-h-[350px] lg:min-h-[450px] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-2xl hover:border-primary/40 hover:shadow-[0_0_50px_-10px_hsl(var(--primary)/0.4)] transition-all duration-500">
                 <Image
                   src="/images/mystical-card-border.png"
                   alt="Lecturas de Tarot"
@@ -244,19 +240,6 @@ export default function PropuestaPage() {
                 <ServiceCard service={services[1]} index={1} />
               </div>
             </div>
-          </div>
-
-          {/* Third Card - Full Width Below */}
-          <div
-            className="mt-5 md:mt-6 transition-all duration-500 ease-out hover:scale-[1.01] hover:-translate-y-1"
-            style={{
-              animationDelay: '450ms',
-              opacity: servicesVisible ? 1 : 0,
-              transform: servicesVisible ? 'translateY(0)' : 'translateY(30px)',
-              transition: 'all 0.6s ease-out 450ms'
-            }}
-          >
-            <ServiceCard service={services[2]} index={2} />
           </div>
         </div>
       </section>
