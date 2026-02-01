@@ -2,9 +2,39 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Shield } from "lucide-react"
 
-export const metadata = {
-  title: "Políticas | Quintaesencia y Vos",
-  description: "Políticas y lineamientos para las consultas de tarot y numerología."
+import type { Metadata } from "next"
+import { SITE_URL } from "@/lib/constants"
+
+export const metadata: Metadata = {
+  title: "Políticas y Ética Profesional | Quinta Esencia",
+  description: "Conoce nuestros acuerdos, código de ética y límites del servicio para las consultas de tarot y numerología en Quinta Esencia.",
+  keywords: ["ética profesional tarot", "políticas de consulta", "privacidad tarot", "límites del servicio"],
+  authors: [{ name: "Quinta Esencia" }],
+  alternates: {
+    canonical: `${SITE_URL}/politicas`,
+  },
+  openGraph: {
+    title: "Políticas y Ética Profesional | Quinta Esencia",
+    description: "Fundamentos para cuidar nuestro espacio sagrado de consulta y desarrollo personal.",
+    url: `${SITE_URL}/politicas`,
+    siteName: "Quinta Esencia",
+    locale: "es_AR",
+    type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/images/hero-bg.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Políticas Quinta Esencia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Políticas y Ética Profesional | Quinta Esencia",
+    description: "Honramos tu soberanía personal y privacidad en cada encuentro.",
+    images: [`${SITE_URL}/images/hero-bg.jpg`],
+  },
 }
 
 export default function PoliticasPage() {

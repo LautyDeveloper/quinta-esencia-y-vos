@@ -22,7 +22,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
           <Sparkles className="h-6 w-6 text-primary" />
           <span className="text-xl font-semibold tracking-wide text-foreground">
-            Quintaesencia
+            Quinta Esencia
           </span>
         </Link>
 

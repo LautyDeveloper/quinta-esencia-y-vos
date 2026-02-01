@@ -16,7 +16,7 @@ export function CTASection() {
       <div className="absolute inset-0">
         <Image
           src="/images/consultation.jpg"
-          alt=""
+          alt="Consultorio místico preparado para una sesión online de tarot y numerología"
           fill
           className="object-cover"
         />
