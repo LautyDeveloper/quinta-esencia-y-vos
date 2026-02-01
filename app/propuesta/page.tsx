@@ -12,31 +12,31 @@ import { MysticalDivider } from "@/components/mystical-elements"
 const services = [
   {
     icon: "/images/reloj.png",
-    title: "1 hora de sesión",
-    description: "Tiempo dedicado exclusivamente a ti, para profundizar en cada mensaje de las cartas.",
+    title: "60 Minutos de Presencia Plena",
+    description: "Tiempo sagrado dedicado exclusivamente a tu proceso, sin prisas, para profundizar en cada revelación.",
     delay: 0
   },
   {
     icon: "/images/camara.png",
-    title: "Consulta Online",
-    description: "Conéctate desde tu espacio sagrado. La energía fluye sin importar la distancia.",
+    title: "Conexión Sin Fronteras",
+    description: "Desde la intimidad de tu santuario. La energía trasciende la distancia física para encontrarnos en el plano sutil.",
     delay: 150,
     featured: true // Middle card
   },
   {
     icon: "Shield",
-    title: "Espacio Seguro",
-    description: "Confidencialidad absoluta. Un refugio para explorar tus luces y sombras sin juicio.",
+    title: "Refugio de Confianza",
+    description: "Un contenedor energético seguro y confidencial, libre de juicios, para que puedas explorar tus luces y sombras.",
     delay: 300
   }
 ]
 
 const included = [
-  "Lectura de Tarot / Numerología",
-  "Análisis de patrones y bloqueos",
-  "Consejos prácticos y rituales",
+  "Lectura profunda de Tarot y Numerología",
+  "Descodificación de patrones limitantes",
+  "Rituales y guías prácticas de acción",
   "Grabación de la sesión (opcional)",
-  "Seguimiento post-consulta"
+  "Acompañamiento post-sesión"
 ]
 
 function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
@@ -116,17 +116,17 @@ export default function PropuestaPage() {
         <div ref={heroRef} className={`relative z-10 max-w-4xl px-6 text-center transition-all duration-1000 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-6 animate-pulse">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-xs uppercase tracking-[0.2em] text-primary/80">Propuesta Exclusiva</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-primary/80">Tu Experiencia Sagrada</span>
             <Sparkles className="w-4 h-4 text-primary" />
           </div>
 
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-foreground mb-8">
-            <span className="block text-primary/90 drop-shadow-sm">El Espejo</span>
-            <span className="block font-light italic">del Alma</span>
+            <span className="block text-primary/90 drop-shadow-sm">El Reflejo</span>
+            <span className="block font-light italic">de tu Esencia</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Un espacio atemporal donde el tarot y la numerología dialogan para revelar tu verdad interior.
+            Un umbral hacia tu interior, donde el lenguaje simbólico del Tarot y los Números te revelan tu propia sabiduría.
           </p>
 
           <div className="mt-12 flex flex-col md:flex-row gap-6 justify-center items-center">
@@ -136,7 +136,7 @@ export default function PropuestaPage() {
               className="rounded-full px-8 h-14 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all transform hover:-translate-y-1 text-lg"
             >
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                Agendar ahora
+                Comenzar mi Transformación
               </a>
             </Button>
             <span className="text-sm text-muted-foreground/60 uppercase tracking-widest">o descubre más abajo</span>
@@ -159,9 +159,9 @@ export default function PropuestaPage() {
 
         <div className="relative z-10 max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">La Experiencia</h2>
+            <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-4">El Viaje Compartido</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Cada sesión es diseñada meticulosamente para brindarte claridad y empoderamiento.
+              Cada encuentro es un ritual de claridad, diseñado para devolverte el poder sobre tu propia narrativa.
             </p>
           </div>
 
@@ -194,9 +194,9 @@ export default function PropuestaPage() {
                     <div className="w-14 h-14 rounded-full bg-background/90 backdrop-blur-sm border border-primary/20 flex items-center justify-center mb-3">
                       <Sparkles className="w-7 h-7 text-primary" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-serif text-foreground">Lecturas de Tarot</h3>
+                    <h3 className="text-2xl md:text-3xl font-serif text-foreground">Lectura de Tarot Evolutivo</h3>
                     <p className="text-muted-foreground text-sm md:text-base max-w-md">
-                      Las cartas nos traen mensajes, nos muestran caminos posibles y nos invitan a reflexionar sobre nuestras decisiones.
+                      Más que predicción, es orientación. Las cartas despejan la niebla para que puedas ver los senderos que se abren ante ti con lucidez.
                     </p>
                   </div>
                 </div>
@@ -248,11 +248,11 @@ export default function PropuestaPage() {
             {/* Left Content */}
             <div className="flex-1 space-y-8">
               <h2 className="text-4xl md:text-5xl font-serif leading-tight">
-                <span className="text-primary italic">Incluido</span> en tu<br />
-                camino de descubrimiento
+                <span className="text-primary italic">Lo que te llevas</span> de este<br />
+                Encuentro
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Nuestra propuesta va más allá de una simple lectura. Es un proceso integral diseñado para que te lleves herramientas tangibles.
+                Esta experiencia trasciende la lectura; es una inmersión profunda que te equipa con herramientas para tu vida cotidiana.
               </p>
 
               <ul className="space-y-6">

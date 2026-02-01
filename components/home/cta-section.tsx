@@ -46,17 +46,16 @@ export function CTASection() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
           </span>
           <span className="text-sm font-medium text-foreground">
-            Comienza tu camino
+            Tu Momento es Ahora
           </span>
         </div>
 
         <h2 className="mt-8 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-          Listo para descubrir lo que las cartas tienen para ti?
+          ¿Sientes el llamado a profundizar en tu propia historia?
         </h2>
 
         <p className="mt-6 text-pretty text-lg text-muted-foreground md:text-xl">
-          Agenda una consulta personalizada y comienza tu viaje de autoconocimiento.
-          Las sesiones duran 1 hora y se realizan de manera online.
+          Permítete una pausa sagrada. Agenda tu sesión personalizada online y comienza el viaje de regreso a ti mism@.
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
@@ -67,11 +66,11 @@ export function CTASection() {
           >
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="h-5 w-5" />
-              Agendar por WhatsApp
+              Reservar mi Sesión
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="min-w-48 text-base bg-background/80 backdrop-blur-sm border-primary/30 hover:bg-primary/10 hover:border-primary transition-all hover:scale-105">
-            <Link href="/propuesta">Ver Propuesta</Link>
+            <Link href="/propuesta">Conocer la Propuesta</Link>
           </Button>
         </div>
       </div>

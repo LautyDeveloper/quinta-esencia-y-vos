@@ -6,40 +6,38 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 const services = [
   {
     id: "tarot",
-    title: "Lecturas de Tarot",
-    description: "Las cartas nos traen mensajes, nos muestran caminos posibles y nos invitan a reflexionar sobre nuestras decisiones.",
+    title: "Quintaesencia",
+    description: "Quintaesencia es la conexion con el mensaje que tu alma necesita escuchar.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
-        <rect x="8" y="4" width="24" height="32" rx="2" />
-        <circle cx="20" cy="20" r="8" />
-        <path d="M20 12v16M12 20h16" />
-        <circle cx="20" cy="20" r="3" fill="currentColor" />
+        <rect x="6" y="2" width="28" height="36" rx="2" />
+        <text x="20" y="25" fontSize="11" fontWeight="700" fill="currentColor" textAnchor="middle" fontFamily="Georgia, serif" fontStyle="italic">5E</text>
       </svg>
     ),
     size: "large"
   },
   {
+    id: "tarot",
+    title: "Lecturas de Tarot",
+    description: "Las cartas nos traen mensajes, nos muestran caminos posibles, nos ayudan a conocernos. Pueden orientarte y dar claridad en momentos de incertidumbre.",
+    icon: (
+      <img src="images/camara.png" alt="" className="rounded-full" />
+    ),
+    size: "small"
+  },
+  {
     id: "numerologia",
-    title: "Numerologia Personal",
-    description: "Descubre tus talentos a traves del estudio de los numeros en tu nombre y fecha de nacimiento.",
+    title: "Numerologia Completa",
+    description: "Descubre el codigo oculto en tus numeros y libera tu maximo potencial. Cada numero cuenta una historia deja que te guien en tu viaje personal.",
     icon: (
       <img src="images/nueve.png" alt="" className="rounded-full" />
     ),
     size: "small"
   },
   {
-    id: "fecha",
-    title: "Estudio de Fecha de Nacimiento",
-    description: "Tu fecha revela informacion sobre tu camino de vida, desafios y oportunidades.",
-    icon: (
-      <img src="images/calendario.png" alt="" className="rounded-full" />
-    ),
-    size: "small"
-  },
-  {
-    id: "vinculos",
-    title: "Analisis de Vinculos",
-    description: "Explora la dinamica de tus relaciones personales y comprende mejor las conexiones que tienes con las personas importantes.",
+    id: "combinados",
+    title: "Tarot y Numerologia combinados",
+    description: "La combinacion perfecta para obtener una lectura completa y profunda. Descubre tu camino de vida, tus desafios y oportunidades.",
     icon: (
       <img src="images/vinculos.png" alt="" className="rounded-full" />
 
@@ -154,14 +152,14 @@ export function ServicesSection() {
           </div>
 
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Servicios
+            Mis Propuestas
           </span>
           <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-            Herramientas para tu crecimiento
+            Llaves para tu Evolución Personal
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-pretty text-lg text-muted-foreground">
-            Cada consulta es un espacio de reflexion y autoconocimiento,
-            utilizando herramientas ancestrales con un enfoque moderno.
+            Espacios de conexión profunda donde la sabiduría ancestral del Tarot y la Numerología
+            se encuentran con tu búsqueda actual de claridad y propósito.
           </p>
         </div>
 
@@ -170,24 +168,6 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
-        </div>
-
-        {/* Policies Note */}
-        <div className="mt-10 relative">
-          <div className="relative rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm p-5 md:p-6">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-primary animate-pulse" />
-              <div>
-                <h3 className="text-sm font-semibold text-foreground">
-                  Importante
-                </h3>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  No se responden preguntas sobre: <span className="text-foreground">Salud</span>, <span className="text-foreground">Problemas legales</span>,
-                  ni sobre <span className="text-foreground">terceras personas</span> (excepto consultas sobre vinculos personales).
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

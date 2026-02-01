@@ -24,26 +24,25 @@ export function AboutSection() {
           {/* Content */}
           <div className={`transition-all duration-700 delay-100 ${tarotVisible ? 'translate-x-0' : '-translate-x-8'}`}>
             <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-              Sobre las Lecturas
+              Esencia de las Lecturas
             </span>
             <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-              El Tarot como espejo del alma
+              El Tarot: Un Espejo de tu Mundo Interior
             </h2>
             <div className="mt-5 space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
               <p>
-                El tarot no predice el futuro de forma determinante. Es una herramienta
-                de reflexion que nos ayuda a ver con mayor claridad las situaciones
-                que atravesamos.
+                El Tarot no sentencia tu destino; lo ilumina. Es una brújula sagrada
+                para la reflexión, brindándote la claridad necesaria para comprender
+                y abrazar tu presente.
               </p>
               <p>
-                Cada carta es un arquetipo, una energia universal que resuena con
-                nuestras experiencias personales. Al interpretar los arcanos,
-                abrimos un dialogo con nuestra intuicion mas profunda.
+                Cada Arcano es un lenguaje universal que dialoga con tu historia.
+                Al interpretarlos, despertamos tu intuición y revelamos las respuestas
+                que ya habitan en ti.
               </p>
               <p>
-                Las sesiones duran aproximadamente <strong className="text-foreground">1 hora</strong> y se realizan
-                de manera <strong className="text-foreground">online</strong>, creando un espacio intimo y comodo
-                para la consulta.
+                Encuentros <strong className="text-foreground">online</strong> de <strong className="text-foreground">1 hora</strong>, diseñados para
+                crear un refugio íntimo y seguro donde reconectar con tu propia voz.
               </p>
             </div>
           </div>
@@ -100,20 +99,21 @@ export function AboutSection() {
           {/* Content */}
           <div className={`order-1 lg:order-2 transition-all duration-700 delay-100 ${numVisible ? 'translate-x-0' : 'translate-x-8'}`}>
             <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-              Numerologia
+              Sabiduría de los Números
             </span>
             <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-              Los numeros cuentan tu historia
+              Tu Mapa de Vida en Números
             </h2>
             <div className="mt-5 space-y-4 text-base md:text-lg leading-relaxed text-muted-foreground">
               <p>
-                Cada numero tiene una vibracion unica y un significado profundo.
-                Tu nombre y fecha de nacimiento contienen informacion valiosa sobre
-                tus talentos, desafios y proposito de vida.
+                Cada número emite una frecuencia única. En tu nombre y fecha de nacimiento
+                reside el plan de tu alma: tus dones innatos, tus desafíos maestros
+                y el propósito que viniste a encarnar.
               </p>
               <p>
-                A traves del estudio numerologico, podemos identificar patrones,
-                ciclos personales y areas de oportunidad para tu desarrollo personal.
+                Desvelamos los ciclos y patrones que rigen tu vida para permitirte fluir
+                con ellos, transformando el autoconocimiento en tu herramienta más
+                poderosa de evolución.
               </p>
             </div>
 
