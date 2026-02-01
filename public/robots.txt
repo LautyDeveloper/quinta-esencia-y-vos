@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://quintaesenciayvos.com.ar/sitemap.xml
+
+# Bloquear recursos innecesarios
+Disallow: /api/
+Disallow: /_next/static/

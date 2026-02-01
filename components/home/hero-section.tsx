@@ -38,7 +38,7 @@ export function HeroSection() {
       >
         <Image
           src="/images/hero-bg.jpg"
-          alt=""
+          alt="Lectura de tarot con velas y cristales en un ambiente cálido y acogedor"
           fill
           className="object-cover"
           priority
@@ -78,7 +78,7 @@ export function HeroSection() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
             <span className="text-sm font-medium text-foreground">
-              Tarot y Numerologia
+              Tarot y Numerología
             </span>
           </div>
 
@@ -99,7 +99,7 @@ export function HeroSection() {
           <p
             className={`mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
-            Un viaje hacia tu interior comienza con una lectura: Avergiua lo que los numeros y las cartas tienen para revelarte.
+            Un viaje hacia tu interior comienza con una lectura: Averigua lo que los números y las cartas tienen para revelarte.
           </p>
 
           {/* CTA Buttons */}
@@ -113,7 +113,7 @@ export function HeroSection() {
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="min-w-48 text-base bg-background/80 backdrop-blur-sm border-primary/30 hover:bg-primary/10 hover:border-primary transition-all hover:scale-105">
-              <Link href="/propuesta">Conocer mas</Link>
+              <Link href="/propuesta">Conocer más</Link>
             </Button>
           </div>
 
@@ -124,7 +124,7 @@ export function HeroSection() {
             <div className="h-12 w-px bg-border" />
             <div className="flex flex-col items-center group">
               <span className="text-3xl font-semibold text-foreground group-hover:text-primary transition-colors">1 hora</span>
-              <span className="text-sm text-muted-foreground">Por sesion</span>
+              <span className="text-sm text-muted-foreground">Por sesión</span>
             </div>
             <div className="h-12 w-px bg-border" />
             <div className="flex flex-col items-center group">

@@ -55,6 +55,7 @@ export function AboutSection() {
                 alt="Carta Two of Wands - Decisiones y nuevos caminos"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -78,8 +79,9 @@ export function AboutSection() {
                 alt="Numeros sagrados y geometria mistica"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background /60 via-transparent to-transparent" />
             </div>
 
             {/* Floating numbers decoration */}

@@ -5,7 +5,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const services = [
   {
-    id: "tarot",
+    id: "presentacion",
     title: "Quintaesencia",
     description: "Quintaesencia es la conexion con el mensaje que tu alma necesita escuchar.",
     icon: (
@@ -21,7 +21,7 @@ const services = [
     title: "Lecturas de Tarot",
     description: "Las cartas nos traen mensajes, nos muestran caminos posibles, nos ayudan a conocernos. Pueden orientarte y dar claridad en momentos de incertidumbre.",
     icon: (
-      <img src="images/tarot.png" alt="" className="rounded-full" />
+      <img src="/images/tarot.png" alt="Cartas de tarot simbolizando guía y claridad" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
     ),
     size: "small"
   },
@@ -30,7 +30,7 @@ const services = [
     title: "Numerologia Completa",
     description: "Descubre el codigo oculto en tus numeros y libera tu maximo potencial. Cada numero cuenta una historia deja que te guien en tu viaje personal.",
     icon: (
-      <img src="images/nueve.png" alt="" className="rounded-full" />
+      <img src="/images/nueve.png" alt="Número nueve simbolizando sabiduría y plenitud" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
     ),
     size: "small"
   },
@@ -39,7 +39,7 @@ const services = [
     title: "Tarot y Numerologia combinados",
     description: "La combinacion perfecta para obtener una lectura completa y profunda. Descubre tu camino de vida, tus desafios y oportunidades.",
     icon: (
-      <img src="images/combinados.png" alt="" className="rounded-full" />
+      <img src="/images/combinados.png" alt="Símbolos de tarot y numerología integrados" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
 
     ),
     size: "medium"
@@ -71,9 +71,10 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
           <>
             <Image
               src="/images/tarot/tarot-spread.jpg"
-              alt=""
+              alt="Mesa con tirada de cartas de tarot, cristales y elementos sagrados"
               fill
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-500" />
           </>
