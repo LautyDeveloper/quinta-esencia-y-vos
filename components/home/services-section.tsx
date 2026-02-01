@@ -21,7 +21,7 @@ const services = [
     title: "Lecturas de Tarot",
     description: "Las cartas nos traen mensajes, nos muestran caminos posibles, nos ayudan a conocernos. Pueden orientarte y dar claridad en momentos de incertidumbre.",
     icon: (
-      <img src="images/camara.png" alt="" className="rounded-full" />
+      <img src="images/tarot.png" alt="" className="rounded-full" />
     ),
     size: "small"
   },
@@ -39,7 +39,7 @@ const services = [
     title: "Tarot y Numerologia combinados",
     description: "La combinacion perfecta para obtener una lectura completa y profunda. Descubre tu camino de vida, tus desafios y oportunidades.",
     icon: (
-      <img src="images/vinculos.png" alt="" className="rounded-full" />
+      <img src="images/combinados.png" alt="" className="rounded-full" />
 
     ),
     size: "medium"
