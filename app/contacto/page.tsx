@@ -66,11 +66,11 @@ export default function ContactoPage() {
 
           {/* Heading */}
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Conectemos
+            Inicia la Conversación
           </h1>
 
           <p className="mt-6 mx-auto max-w-lg text-pretty text-lg text-muted-foreground">
-            Estoy aqui para acompanarte en tu camino de autoconocimiento
+            Estoy aquí para acompañarte a descifrar los mensajes que el universo tiene para ti.
           </p>
 
           {/* Contact Buttons - REDESIGNED */}
@@ -105,7 +105,7 @@ export default function ContactoPage() {
 
                 {/* Text */}
                 <div className="text-left">
-                  <p className="text-sm text-teal-300/80 font-medium">Escribeme por</p>
+                  <p className="text-sm text-teal-300/80 font-medium">Conecta vía</p>
                   <p className="text-xl font-semibold text-white tracking-wide">WhatsApp</p>
                 </div>
 
@@ -152,7 +152,7 @@ export default function ContactoPage() {
 
                 {/* Text */}
                 <div className="text-left">
-                  <p className="text-sm text-primary/80 font-medium">Sigueme en</p>
+                  <p className="text-sm text-primary/80 font-medium">Inspírate en</p>
                   <p className="text-xl font-semibold text-foreground tracking-wide">Instagram</p>
                 </div>
 
@@ -175,7 +175,7 @@ export default function ContactoPage() {
             <div className="inline-flex flex-col sm:flex-row items-center gap-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-md px-8 py-5">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                <span className="text-sm text-muted-foreground">Consultas <span className="text-foreground font-medium">100% Online</span></span>
+                <span className="text-sm text-muted-foreground">Sesiones <span className="text-foreground font-medium">Virtuales</span></span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-border" />
               <div className="flex items-center gap-3">
@@ -186,7 +186,7 @@ export default function ContactoPage() {
 
             {/* Quote */}
             <blockquote className="mt-10 text-base italic text-muted-foreground/80">
-              "Las cartas no predicen el futuro, iluminan el presente"
+              "El futuro no está escrito en piedra; se esculpe con la consciencia del presente."
             </blockquote>
           </div>
         </div>

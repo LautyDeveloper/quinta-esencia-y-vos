@@ -24,23 +24,23 @@ export default function PoliticasPage() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-2">
             <Shield className="h-4 w-4 text-accent" />
             <span className="text-sm font-medium text-muted-foreground">
-              Políticas
+              Código de Ética
             </span>
           </div>
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
-            Políticas y Lineamientos
+            Acuerdos y Ética Profesional
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Lineamientos importantes para las consultas de tarot y numerología.
+            Fundamentos para cuidar nuestro espacio sagrado de consulta.
           </p>
         </div>
 
         {/* Content */}
         <div className="prose prose-lg prose-stone max-w-none dark:prose-invert prose-headings:font-semibold prose-headings:tracking-tight">
-          <h2>Sobre las consultas</h2>
+          <h2>La Naturaleza del Encuentro</h2>
           <p>
-            Las consultas de tarot y numerología son herramientas de reflexión, autoconocimiento 
-            y desarrollo personal. <strong>No son un servicio de adivinación ni predicción del futuro</strong>.
+            Las consultas de tarot y numerología son herramientas de reflexión, autoconocimiento
+            y desarrollo personal. <strong>Nos alejamos del determinismo. Aquí no adivinamos tu futuro; te empoderamos para que lo construyas.</strong>
           </p>
           <p>
             El tarot y la numerología nos ayudan a:
@@ -52,49 +52,47 @@ export default function PoliticasPage() {
             <li>Identificar patrones y áreas de crecimiento</li>
           </ul>
 
-          <h2>Temas que no se abordan</h2>
+          <h2>Límites del Servicio</h2>
           <p>
-            Por ética profesional y responsabilidad, hay ciertos temas que 
+            Por ética profesional y responsabilidad, hay ciertos temas que
             <strong> no se abordan</strong> en las consultas:
           </p>
-          
+
           <h3>Salud</h3>
           <p>
-            No se responden preguntas sobre diagnósticos, tratamientos o condiciones de salud. 
+            No se responden preguntas sobre diagnósticos, tratamientos o condiciones de salud.
             Para estos temas, siempre debes consultar con profesionales médicos calificados.
           </p>
 
           <h3>Problemas legales</h3>
           <p>
-            No se brinda asesoramiento sobre asuntos legales, juicios, contratos o situaciones 
+            No se brinda asesoramiento sobre asuntos legales, juicios, contratos o situaciones
             que requieran la intervención de abogados u otros profesionales del derecho.
           </p>
 
           <h3>Terceras personas</h3>
           <p>
-            No se realizan lecturas sobre terceras personas sin su consentimiento. La excepción 
-            son las consultas sobre vínculos personales (pareja, familia, amistades), donde 
+            No se realizan lecturas sobre terceras personas sin su consentimiento. La excepción
+            son las consultas sobre vínculos personales (pareja, familia, amistades), donde
             exploramos la dinámica de la relación desde tu perspectiva.
           </p>
 
-          <h2>Confidencialidad</h2>
+          <h2>Tu Privacidad es Sagrada</h2>
           <p>
-            Todo lo que se comparte durante las consultas es estrictamente confidencial. 
+            Todo lo que se comparte durante las consultas es estrictamente confidencial.
             No se graba ni se comparte información personal con terceros.
           </p>
 
           <h2>Cancelaciones y reprogramaciones</h2>
           <p>
-            Si necesitas cancelar o reprogramar tu consulta, te pido que me avises con al 
-            menos 24 horas de anticipación. Esto permite reorganizar la agenda y ofrecer 
+            Si necesitas cancelar o reprogramar tu consulta, te pido que me avises con al
+            menos 24 horas de anticipación. Esto permite reorganizar la agenda y ofrecer
             ese espacio a otra persona.
           </p>
 
-          <h2>Responsabilidad</h2>
+          <h2>Soberanía Personal</h2>
           <p>
-            Las decisiones que tomes a partir de una consulta son tu responsabilidad. 
-            El tarot y la numerología son herramientas de reflexión, pero las elecciones 
-            y acciones en tu vida siempre son tuyas.
+            Tú eres el/la arquitecto/a de tu destino. Las cartas sugieren, pero tu libre albedrío decide. Honramos tu poder de elección.
           </p>
         </div>
 

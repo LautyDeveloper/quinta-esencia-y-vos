@@ -99,9 +99,7 @@ export function HeroSection() {
           <p
             className={`mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
-            Las cartas del tarot nos traen mensajes, nos muestran caminos y nos invitan a
-            reflexionar. La numerologia revela tus talentos personales a traves de tu nombre
-            y fecha de nacimiento.
+            Un viaje hacia tu interior comienza con una lectura: Avergiua lo que los numeros y las cartas tienen para revelarte.
           </p>
 
           {/* CTA Buttons */}
@@ -110,7 +108,7 @@ export function HeroSection() {
           >
             <Button asChild size="lg" className="min-w-48 text-base gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all hover:scale-105">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <WhatsAppIcon className="h-5 w-5" />
+                <WhatsAppIcon className="h-5 w-5" />
                 Agendar Consulta
               </a>
             </Button>
