@@ -38,7 +38,7 @@ export function AboutSection() {
               <p>
                 Cada Arcano es un lenguaje universal que dialoga con tu historia.
                 Al interpretarlos, despertamos tu intuición y revelamos las respuestas
-                que ya habitan en ti.
+                que ya habitan en vos.
               </p>
               <p>
                 Encuentros <strong className="text-foreground">online</strong> de <strong className="text-foreground">1 hora</strong>, diseñados para
@@ -76,7 +76,7 @@ export function AboutSection() {
             <div className="relative aspect-square max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 group">
               <Image
                 src="/images/numerology/sacred-numbers.jpg"
-                alt="Numeros sagrados y geometria mistica"
+                alt="Números sagrados y geometría mística"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -123,12 +123,12 @@ export function AboutSection() {
             <div className="mt-6 grid grid-cols-3 gap-2">
               {[
                 { num: 1, meaning: "Liderazgo" },
-                { num: 2, meaning: "Armonia" },
+                { num: 2, meaning: "Armonía" },
                 { num: 3, meaning: "Creatividad" },
                 { num: 4, meaning: "Estabilidad" },
                 { num: 5, meaning: "Libertad" },
                 { num: 6, meaning: "Amor" },
-                { num: 7, meaning: "Sabiduria" },
+                { num: 7, meaning: "Sabiduría" },
                 { num: 8, meaning: "Abundancia" },
                 { num: 9, meaning: "Humanidad" }
               ].map(({ num, meaning }, i) => (

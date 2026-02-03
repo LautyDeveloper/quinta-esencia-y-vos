@@ -104,7 +104,7 @@ export function PropuestaContent() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/propuesta-hero.jpg"
-            alt="Sesión de tarot y numerología en un ambiente místico y relajado"
+            alt="Sesión de Tarot y Numerología en un ambiente místico y relajado"
             fill
             className="object-cover opacity-60"
             priority
@@ -139,10 +139,10 @@ export function PropuestaContent() {
               className="rounded-full px-8 h-14 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all transform hover:-translate-y-1 text-lg"
             >
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                Comenzar mi Transformación
+                Comenzá tu transformación
               </a>
             </Button>
-            <span className="text-sm text-muted-foreground/60 uppercase tracking-widest">o descubre más abajo</span>
+            <span className="text-sm text-muted-foreground/60 uppercase tracking-widest">o descubrí más abajo</span>
           </div>
         </div>
 
@@ -185,7 +185,7 @@ export function PropuestaContent() {
               <div className="relative h-full min-h-[350px] lg:min-h-[450px] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-2xl hover:border-primary/40 hover:shadow-[0_0_50px_-10px_hsl(var(--primary)/0.4)] transition-all duration-500">
                 <Image
                   src="/images/mystical-card-border.png"
-                  alt="Cartas de tarot dispuestas artísticamente para una lectura evolutiva"
+                  alt="Cartas de Tarot dispuestas artísticamente para una lectura evolutiva"
                   fill
                   className="object-cover"
                 />
@@ -199,7 +199,7 @@ export function PropuestaContent() {
                     </div>
                     <h3 className="text-2xl md:text-3xl font-serif text-foreground">Lectura de Tarot Evolutivo</h3>
                     <p className="text-muted-foreground text-sm md:text-base max-w-md">
-                      Más que predicción, es orientación. Las cartas despejan la niebla para que puedas ver los senderos que se abren ante ti con lucidez.
+                      Más que predicción, es orientación. Las cartas despejan la niebla para que puedas ver los senderos que se abren ante vos con lucidez.
                     </p>
                   </div>
                 </div>
@@ -251,7 +251,7 @@ export function PropuestaContent() {
             {/* Left Content */}
             <div className="flex-1 space-y-8">
               <h2 className="text-4xl md:text-5xl font-serif leading-tight">
-                <span className="text-primary italic">Lo que te llevas</span> de este<br />
+                <span className="text-primary italic">Lo que te llevás</span> de este<br />
                 Encuentro
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -264,7 +264,7 @@ export function PropuestaContent() {
                     <div className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center bg-secondary/30 group-hover:bg-primary/10 transition-colors">
                       <Check className="w-5 h-5 text-primary" />
                     </div>
-                    <span className="text-lg font-light">{item}</span>
+                    <span className="text-lg font-light">{item.replace("te llevas", "te llevás")}</span>
                   </li>
                 ))}
               </ul>
@@ -313,7 +313,7 @@ export function PropuestaContent() {
               className="rounded-full bg-foreground text-background hover:bg-foreground/90 px-8 text-lg"
             >
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                Comenzar mi Viaje
+                Comenzá tu viaje
               </a>
             </Button>
           </div>

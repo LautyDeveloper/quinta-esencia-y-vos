@@ -13,10 +13,10 @@ const _cormorant = Cormorant_Garamond({
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Quintaesencia y Vos | Tarot y Numerología',
-  description: 'Descubre un mundo de posibilidades con lecturas de tarot y numerología. Herramientas para tu crecimiento personal y toma de decisiones.',
+  title: 'Quinta Esencia y Vos | Tarot y Numerología',
+  description: 'Descubrí un mundo de posibilidades con lecturas de Tarot y Numerología. Herramientas para tu crecimiento personal y toma de decisiones.',
   generator: 'v0.app',
-  keywords: ['tarot', 'numerología', 'crecimiento personal', 'espiritualidad', 'autoconocimiento'],
+  keywords: ['Tarot', 'Numerología', 'crecimiento personal', 'espiritualidad', 'autoconocimiento'],
   icons: {
     icon: [
       {

@@ -25,7 +25,7 @@ export function Header() {
             <text x="20" y="25" fontSize="11" fontWeight="700" fill="currentColor" textAnchor="middle" fontFamily="Georgia, serif" fontStyle="italic">5E</text>
           </svg>
           <span className="text-xl font-semibold tracking-wide text-foreground">
-            Quintaesencia
+            QuintaEsencia
           </span>
         </Link>
 
@@ -43,7 +43,7 @@ export function Header() {
           <Button asChild className="ml-4 gap-2">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="h-4 w-4" />
-              Agendar Consulta
+              Agendá tu consulta
             </a>
           </Button>
         </nav>
@@ -76,7 +76,7 @@ export function Header() {
             <Button asChild className="mt-2 w-full gap-2">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                 <WhatsAppIcon className="h-4 w-4" />
-                Agendar Consulta
+                Agendá tu consulta
               </a>
             </Button>
           </div>

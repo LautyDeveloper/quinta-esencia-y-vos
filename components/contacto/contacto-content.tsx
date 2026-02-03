@@ -66,11 +66,11 @@ export function ContactoContent() {
 
           {/* Heading */}
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Inicia la Conversación
+            Iniciá la Conversación
           </h1>
 
           <p className="mt-6 mx-auto max-w-lg text-pretty text-lg text-muted-foreground">
-            Estoy aquí para acompañarte a descifrar los mensajes que el universo tiene para ti.
+            Estoy aquí para acompañarte a descifrar los mensajes que el universo tiene para vos.
           </p>
 
           {/* Contact Buttons - REDESIGNED */}
@@ -105,7 +105,7 @@ export function ContactoContent() {
 
                 {/* Text */}
                 <div className="text-left">
-                  <p className="text-sm text-teal-300/80 font-medium">Conecta vía</p>
+                  <p className="text-sm text-teal-300/80 font-medium">Conectá vía</p>
                   <p className="text-xl font-semibold text-white tracking-wide">WhatsApp</p>
                 </div>
 
@@ -152,7 +152,7 @@ export function ContactoContent() {
 
                 {/* Text */}
                 <div className="text-left">
-                  <p className="text-sm text-primary/80 font-medium">Inspírate en</p>
+                  <p className="text-sm text-primary/80 font-medium">Inspirate en</p>
                   <p className="text-xl font-semibold text-foreground tracking-wide">Instagram</p>
                 </div>
 
