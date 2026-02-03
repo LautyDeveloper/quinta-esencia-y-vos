@@ -6,8 +6,8 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 const services = [
   {
     id: "presentacion",
-    title: "Quinta Esencia",
-    description: "Quinta Esencia es la conexión con el mensaje que tu alma necesita escuchar.",
+    title: "QuintaEsencia",
+    description: "QuintaEsencia es la conexión con el mensaje que tu alma necesita escuchar.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
         <rect x="6" y="2" width="28" height="36" rx="2" />

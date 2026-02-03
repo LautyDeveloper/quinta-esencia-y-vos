@@ -25,7 +25,7 @@ export function Header() {
             <text x="20" y="25" fontSize="11" fontWeight="700" fill="currentColor" textAnchor="middle" fontFamily="Georgia, serif" fontStyle="italic">5E</text>
           </svg>
           <span className="text-xl font-semibold tracking-wide text-foreground">
-            Quinta Esencia
+            QuintaEsencia
           </span>
         </Link>
 

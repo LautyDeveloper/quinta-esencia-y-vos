@@ -24,7 +24,7 @@ export function Footer() {
             <Link href="/" className="inline-flex items-center gap-2 group">
               <Sparkles className="h-6 w-6 text-primary transition-transform group-hover:rotate-12" />
               <span className="text-xl font-semibold tracking-wide text-foreground">
-                Quinta Esencia
+                QuintaEsencia
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
@@ -115,7 +115,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Quinta Esencia. Todos los derechos reservados.
+            © {new Date().getFullYear()} QuintaEsencia. Todos los derechos reservados.
           </p>
         </div>
       </div>
