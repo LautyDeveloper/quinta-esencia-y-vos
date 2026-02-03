@@ -55,7 +55,7 @@ export function CTASection() {
         </h2>
 
         <p className="mt-6 text-pretty text-lg text-muted-foreground md:text-xl">
-          Permitite una pausa sagrada. Agendá tu sesión personalizada online y comenzá el viaje de regreso a vos mism@.
+          Permitite una pausa sagrada. Agendá tu sesión personalizada online o presencial y comenzá el viaje de regreso a vos mism@.
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">

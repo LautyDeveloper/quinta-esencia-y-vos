@@ -131,14 +131,11 @@ export function HeroSection() {
               <span className="text-3xl font-semibold text-foreground group-hover:text-primary transition-colors">Online</span>
               <span className="text-sm text-muted-foreground">Consultas virtuales</span>
             </div>
+            <div className="flex flex-col items-center group">
+              <span className="text-3xl font-semibold text-foreground group-hover:text-primary transition-colors">Presencial</span>
+              <span className="text-sm text-muted-foreground">Consultas presenciales</span>
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-primary rounded-full animate-pulse" />
         </div>
       </div>
     </section>

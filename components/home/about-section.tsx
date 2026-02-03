@@ -41,7 +41,7 @@ export function AboutSection() {
                 que ya habitan en vos.
               </p>
               <p>
-                Encuentros <strong className="text-foreground">online</strong> de <strong className="text-foreground">1 hora</strong>, diseñados para
+                Encuentros <strong className="text-foreground">online</strong> o <strong className="text-foreground">presencial</strong> de <strong className="text-foreground">1 hora</strong>, diseñados para
                 crear un refugio íntimo y seguro donde reconectar con tu propia voz.
               </p>
             </div>
