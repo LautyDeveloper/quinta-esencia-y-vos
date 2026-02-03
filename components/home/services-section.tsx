@@ -6,8 +6,8 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 const services = [
   {
     id: "presentacion",
-    title: "Quintaesencia",
-    description: "Quintaesencia es la conexion con el mensaje que tu alma necesita escuchar.",
+    title: "Quinta Esencia",
+    description: "Quinta Esencia es la conexión con el mensaje que tu alma necesita escuchar.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
         <rect x="6" y="2" width="28" height="36" rx="2" />
@@ -19,16 +19,16 @@ const services = [
   {
     id: "tarot",
     title: "Lecturas de Tarot",
-    description: "Las cartas nos traen mensajes, nos muestran caminos posibles, nos ayudan a conocernos. Pueden orientarte y dar claridad en momentos de incertidumbre.",
+    description: "Las cartas nos traen mensajes, nos muestran caminos posibles, nos ayudan a conocernos. Pueden orientarte y darte claridad en momentos de incertidumbre.",
     icon: (
-      <img src="/images/tarot.png" alt="Cartas de tarot simbolizando guía y claridad" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+      <img src="/images/tarot.png" alt="Cartas de Tarot simbolizando guía y claridad" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
     ),
     size: "small"
   },
   {
     id: "numerologia",
-    title: "Numerologia Completa",
-    description: "Descubre el codigo oculto en tus numeros y libera tu maximo potencial.\nCada numero cuenta una historia; deja que te guien en tu viaje personal.",
+    title: "Numerología Completa",
+    description: "Descubrí el código oculto en tus Números y liberá tu máximo potencial.\nCada Número cuenta una historia; dejá que te guíen en tu viaje personal.",
     icon: (
       <img src="/images/nueve.png" alt="Número nueve simbolizando sabiduría y plenitud" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
     ),
@@ -36,10 +36,10 @@ const services = [
   },
   {
     id: "combinados",
-    title: "Tarot y Numerologia combinados",
-    description: "La combinacion perfecta para obtener una lectura completa y profunda. Descubre tu camino de vida, tus desafios y oportunidades.",
+    title: "Tarot y Numerología combinados",
+    description: "La combinación perfecta para obtener una lectura completa y profunda. Descubrí tu camino de vida, tus desafíos y oportunidades.",
     icon: (
-      <img src="/images/combinados.png" alt="Símbolos de tarot y numerología integrados" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+      <img src="/images/combinados.png" alt="Símbolos de Tarot y Numerología integrados" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
 
     ),
     size: "medium"
@@ -71,7 +71,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
           <>
             <Image
               src="/images/tarot/tarot-spread2.jpg"
-              alt="Mesa con tirada de cartas de tarot, cristales y elementos sagrados"
+              alt="Mesa con tirada de cartas de Tarot, cristales y elementos sagrados"
               fill
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

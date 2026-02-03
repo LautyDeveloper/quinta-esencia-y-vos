@@ -5,8 +5,8 @@ import JsonLd from "@/components/json-ld"
 
 export const metadata: Metadata = {
   title: "Propuesta de Lecturas de Tarot y Numerología | Quinta Esencia",
-  description: "Conoce nuestra propuesta de sesiones personalizadas de Tarot y Numerología. Un viaje de autoconocimiento y claridad para tu evolución personal.",
-  keywords: ["lectura de tarot", "numerología", "autoconocimiento", "crecimiento personal", "sesión online", "tarot evolutivo"],
+  description: "Conocé nuestra propuesta de sesiones personalizadas de Tarot y Numerología. Un viaje de autoconocimiento y claridad para tu evolución personal.",
+  keywords: ["lectura de Tarot", "Numerología", "autoconocimiento", "crecimiento personal", "sesión online", "Tarot evolutivo"],
   authors: [{ name: "Quinta Esencia" }],
   alternates: {
     canonical: `${SITE_URL}/propuesta`,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Propuesta de Lecturas de Tarot y Numerología | Quinta Esencia",
-    description: "Descubre lo que las cartas y los números tienen para revelarte en nuestras sesiones personalizadas.",
+    description: "Descubrí lo que las cartas y los números tienen para revelarte en nuestras sesiones personalizadas.",
     images: [`${SITE_URL}/images/propuesta-hero.jpg`],
   },
 }

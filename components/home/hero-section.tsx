@@ -38,7 +38,7 @@ export function HeroSection() {
       >
         <Image
           src="/images/hero-bg.jpg"
-          alt="Lectura de tarot con velas y cristales en un ambiente cálido y acogedor"
+          alt="Lectura de Tarot con velas y cristales en un ambiente cálido y acogedor"
           fill
           className="object-cover"
           priority
@@ -86,7 +86,7 @@ export function HeroSection() {
           <h1
             className={`max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
-            Descubre un mundo de{" "}
+            Descubrí un mundo de{" "}
             <span className="text-primary relative">
               posibilidades
               <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary/30" viewBox="0 0 200 12" preserveAspectRatio="none">
@@ -99,7 +99,7 @@ export function HeroSection() {
           <p
             className={`mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
-            Un viaje hacia tu interior comienza con una lectura: Averigua lo que los números y las cartas tienen para revelarte.
+            Un viaje hacia tu interior comienza con una lectura: averiguá lo que los Números y las cartas tienen para revelarte.
           </p>
 
           {/* CTA Buttons */}
@@ -109,11 +109,11 @@ export function HeroSection() {
             <Button asChild size="lg" className="min-w-48 text-base gap-2 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all hover:scale-105">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="h-5 w-5" />
-                Agendar Consulta
+                Agendá tu consulta
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="min-w-48 text-base bg-background/80 backdrop-blur-sm border-primary/30 hover:bg-primary/10 hover:border-primary transition-all hover:scale-105">
-              <Link href="/propuesta">Conocer más</Link>
+              <Link href="/propuesta">Conocé más</Link>
             </Button>
           </div>
 

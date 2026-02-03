@@ -7,8 +7,8 @@ import { SITE_URL } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "Políticas y Ética Profesional | Quinta Esencia",
-  description: "Conoce nuestros acuerdos, código de ética y límites del servicio para las consultas de tarot y numerología en Quinta Esencia.",
-  keywords: ["ética profesional tarot", "políticas de consulta", "privacidad tarot", "límites del servicio"],
+  description: "Conocé nuestros acuerdos, código de ética y límites del servicio para las consultas de Tarot y Numerología en Quinta Esencia.",
+  keywords: ["ética profesional Tarot", "políticas de consulta", "privacidad Tarot", "límites del servicio"],
   authors: [{ name: "Quinta Esencia" }],
   alternates: {
     canonical: `${SITE_URL}/politicas`,
@@ -45,7 +45,7 @@ export default function PoliticasPage() {
         <Button asChild variant="ghost" className="mb-8 -ml-4">
           <Link href="/">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Volver al inicio
+            Volvé al inicio
           </Link>
         </Button>
 
@@ -69,11 +69,11 @@ export default function PoliticasPage() {
         <div className="prose prose-lg prose-stone max-w-none dark:prose-invert prose-headings:font-semibold prose-headings:tracking-tight">
           <h2>La Naturaleza del Encuentro</h2>
           <p>
-            Las consultas de tarot y numerología son herramientas de reflexión, autoconocimiento
+            Las consultas de Tarot y Numerología son herramientas de reflexión, autoconocimiento
             y desarrollo personal. <strong>Nos alejamos del determinismo. Aquí no adivinamos tu futuro; te empoderamos para que lo construyas.</strong>
           </p>
           <p>
-            El tarot y la numerología nos ayudan a:
+            El Tarot y la Numerología nos ayudan a:
           </p>
           <ul>
             <li>Reflexionar sobre nuestra situación actual</li>
@@ -91,7 +91,7 @@ export default function PoliticasPage() {
           <h3>Salud</h3>
           <p>
             No se responden preguntas sobre diagnósticos, tratamientos o condiciones de salud.
-            Para estos temas, siempre debes consultar con profesionales médicos calificados.
+            Para estos temas, siempre debés consultar con profesionales médicos calificados.
           </p>
 
           <h3>Problemas legales</h3>
@@ -115,25 +115,25 @@ export default function PoliticasPage() {
 
           <h2>Cancelaciones y reprogramaciones</h2>
           <p>
-            Si necesitas cancelar o reprogramar tu consulta, te pido que me avises con al
+            Si necesitás cancelar o reprogramar tu consulta, te pido que me avisés con al
             menos 24 horas de anticipación. Esto permite reorganizar la agenda y ofrecer
             ese espacio a otra persona.
           </p>
 
           <h2>Soberanía Personal</h2>
           <p>
-            Tú eres el/la arquitecto/a de tu destino. Las cartas sugieren, pero tu libre albedrío decide. Honramos tu poder de elección.
+            Vos sos el/la arquitecto/a de tu destino. Las cartas sugieren, pero tu libre albedrío decide. Honramos tu poder de elección.
           </p>
         </div>
 
         {/* CTA */}
         <div className="mt-16 rounded-xl border border-border bg-secondary/50 p-8 text-center">
-          <h3 className="text-xl font-semibold text-foreground">¿Tienes alguna pregunta?</h3>
+          <h3 className="text-xl font-semibold text-foreground">¿Tenés alguna pregunta?</h3>
           <p className="mt-2 text-muted-foreground">
-            Si tienes dudas sobre las políticas o el proceso de consulta, no dudes en contactarme.
+            Si tenés dudas sobre las políticas o el proceso de consulta, no dudés en contactarme.
           </p>
           <Button asChild className="mt-6">
-            <Link href="/contacto">Contactar</Link>
+            <Link href="/contacto">Contactame</Link>
           </Button>
         </div>
       </div>

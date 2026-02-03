@@ -5,15 +5,15 @@ import JsonLd from "@/components/json-ld"
 
 export const metadata: Metadata = {
   title: "Contacto | Quinta Esencia - Tarot y Numerología",
-  description: "Ponte en contacto con Quinta Esencia para agendar tu consulta de Tarot o Numerología. Estamos aquí para acompañarte en tu viaje de autoconocimiento.",
-  keywords: ["contacto tarot", "agendar consulta numerología", "tarot Berazategui", "lectura de cartas online"],
+  description: "Ponete en contacto con Quinta Esencia para agendar tu consulta de Tarot o Numerología. Estamos aquí para acompañarte en tu viaje de autoconocimiento.",
+  keywords: ["contacto Tarot", "agendar consulta Numerología", "Tarot Berazategui", "lectura de cartas online"],
   authors: [{ name: "Quinta Esencia" }],
   alternates: {
     canonical: `${SITE_URL}/contacto`,
   },
   openGraph: {
     title: "Contacto | Quinta Esencia - Tarot y Numerología",
-    description: "Inicia la conversación y descubre los mensajes que el universo tiene para ti.",
+    description: "Iniciá la conversación y descubrí los mensajes que el universo tiene para vos.",
     url: `${SITE_URL}/contacto`,
     siteName: "Quinta Esencia",
     locale: "es_AR",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Contacto | Quinta Esencia - Tarot y Numerología",
-    description: "Conecta con nosotros vía WhatsApp o Instagram para iniciar tu proceso de transformación.",
+    description: "Conectá con nosotros vía WhatsApp o Instagram para iniciar tu proceso de transformación.",
     images: [`${SITE_URL}/images/contact-bg.jpg`],
   },
 }
@@ -40,7 +40,7 @@ export default function ContactoPage() {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contacto | Quinta Esencia",
-    "description": "Página de contacto para agendar consultas de tarot y numerología.",
+    "description": "Página de contacto para agendar consultas de Tarot y Numerología.",
     "url": `${SITE_URL}/contacto`
   }
 

@@ -8,8 +8,8 @@ import JsonLd from "@/components/json-ld"
 
 export const metadata: Metadata = {
   title: "Quinta Esencia | Lecturas de Tarot y Numerología en Berazategui",
-  description: "Descubre tu camino con Quinta Esencia. Ofrecemos lecturas de tarot evolutivo y numerología personal en Berazategui y online. ¡Inicia tu viaje hoy!",
-  keywords: ["tarot", "numerología", "Berazategui", "lectura de cartas", "autoconocimiento", "crecimiento personal", "Buenos Aires"],
+  description: "Descubrí tu camino con Quinta Esencia. Ofrecemos lecturas de Tarot evolutivo y Numerología personal en Berazategui y online. ¡Iniciá tu viaje hoy!",
+  keywords: ["Tarot", "Numerología", "Berazategui", "lectura de cartas", "autoconocimiento", "crecimiento personal", "Buenos Aires"],
   authors: [{ name: "Quinta Esencia" }],
   alternates: {
     canonical: SITE_URL,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Quinta Esencia | Lecturas de Tarot y Numerología",
-    description: "Descubre un mundo de posibilidades con lecturas de tarot y numerología.",
+    description: "Descubrí un mundo de posibilidades con lecturas de Tarot y Numerología.",
     images: [`${SITE_URL}/images/hero-bg.jpg`],
   },
 }
@@ -43,7 +43,7 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Quinta Esencia - Lecturas de Tarot y Numerología",
-    "description": "Descubre tu camino con Quinta Esencia. Ofrecemos lecturas de tarot evolutivo y numerología personal en Berazategui y online.",
+    "description": "Descubrí tu camino con Quinta Esencia. Ofrecemos lecturas de Tarot evolutivo y Numerología personal en Berazategui y online.",
     "url": SITE_URL,
     "telephone": "+5491100000000",
     "email": "quintaesenciayvos@gmail.com",

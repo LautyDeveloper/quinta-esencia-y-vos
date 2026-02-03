@@ -28,7 +28,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
-              Descubre un mundo de posibilidades a través del tarot y la numerología.
+              Descubrí un mundo de posibilidades a través del Tarot y la Numerología.
               Herramientas para tu crecimiento personal y toma de decisiones.
             </p>
             <div className="mt-6 flex gap-4">

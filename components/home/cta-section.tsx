@@ -16,7 +16,7 @@ export function CTASection() {
       <div className="absolute inset-0">
         <Image
           src="/images/consultation.jpg"
-          alt="Consultorio místico preparado para una sesión online de tarot y numerología"
+          alt="Consultorio místico preparado para una sesión online de Tarot y Numerología"
           fill
           className="object-cover"
         />
@@ -51,11 +51,11 @@ export function CTASection() {
         </div>
 
         <h2 className="mt-8 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-          ¿Sientes el llamado a profundizar en tu propia historia?
+          ¿Sentís el llamado a profundizar en tu propia historia?
         </h2>
 
         <p className="mt-6 text-pretty text-lg text-muted-foreground md:text-xl">
-          Permítete una pausa sagrada. Agenda tu sesión personalizada online y comienza el viaje de regreso a ti mism@.
+          Permitite una pausa sagrada. Agendá tu sesión personalizada online y comenzá el viaje de regreso a vos mism@.
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
@@ -66,11 +66,11 @@ export function CTASection() {
           >
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <WhatsAppIcon className="h-5 w-5" />
-              Reservar mi Sesión
+              Reservá tu sesión
             </a>
           </Button>
           <Button asChild variant="outline" size="lg" className="min-w-48 text-base bg-background/80 backdrop-blur-sm border-primary/30 hover:bg-primary/10 hover:border-primary transition-all hover:scale-105">
-            <Link href="/propuesta">Conocer la Propuesta</Link>
+            <Link href="/propuesta">Conocé la propuesta</Link>
           </Button>
         </div>
       </div>
