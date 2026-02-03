@@ -28,7 +28,7 @@ const services = [
   {
     id: "numerologia",
     title: "Numerologia Completa",
-    description: "Descubre el codigo oculto en tus numeros y libera tu maximo potencial. Cada numero cuenta una historia deja que te guien en tu viaje personal.",
+    description: "Descubre el codigo oculto en tus numeros y libera tu maximo potencial.\nCada numero cuenta una historia; deja que te guien en tu viaje personal.",
     icon: (
       <img src="/images/nueve.png" alt="Número nueve simbolizando sabiduría y plenitud" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
     ),
@@ -70,7 +70,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         {isLarge && (
           <>
             <Image
-              src="/images/tarot/tarot-spread.jpg"
+              src="/images/tarot/tarot-spread2.jpg"
               alt="Mesa con tirada de cartas de tarot, cristales y elementos sagrados"
               fill
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -109,7 +109,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
           </h3>
 
           {/* Description */}
-          <p className={`${isLarge ? 'text-base md:text-lg text-white/80' : 'text-sm md:text-base text-muted-foreground'} leading-relaxed flex-grow`}>
+          <p className={`${isLarge ? 'text-base md:text-lg text-white/80' : 'text-sm md:text-base text-muted-foreground'} leading-relaxed flex-gro    w whitespace-pre-line`}>
             {service.description}
           </p>
         </div>
