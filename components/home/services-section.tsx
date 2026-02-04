@@ -70,13 +70,13 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         {isLarge && (
           <>
             <Image
-              src="/images/tarot/tarot-spread2.jpg"
+              src="/images/tarot/Gemini_Generated_Image_kpwj9fkpwj9fkpwj (1).png"
               alt="Mesa con tirada de cartas de Tarot, cristales y elementos sagrados"
               fill
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-500" />
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-white/5 transition-colors duration-500" />
           </>
         )}
 
@@ -99,17 +99,17 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col">
           {/* Icon */}
-          <div className={`${isLarge ? 'w-16 h-16 md:w-20 md:h-20 text-white/90' : 'w-12 h-12 md:w-14 md:h-14 text-primary/70'} group-hover:text-primary transition-colors duration-500 mb-6 [&>img]:drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)] [&>img]:group-hover:drop-shadow-[0_0_12px_rgba(147,51,234,0.5),0_0_20px_rgba(59,130,246,0.3),0_0_30px_rgba(99,102,241,0.2)] [&>img]:transition-all [&>img]:duration-1000`}>
+          <div className={`${isLarge ? 'w-16 h-16 md:w-20 md:h-20 text-black/90' : 'w-12 h-12 md:w-14 md:h-14 text-primary/70'} group-hover:text-primary transition-colors duration-500 mb-6 [&>img]:drop-shadow-[2px_4px_6px_rgba(0,0,0,0.5)] [&>img]:group-hover:drop-shadow-[0_0_12px_rgba(147,51,234,0.5),0_0_20px_rgba(59,130,246,0.3),0_0_30px_rgba(99,102,241,0.2)] [&>img]:transition-all [&>img]:duration-1000`}>
             {service.icon}
           </div>
 
           {/* Title */}
-          <h3 className={`${isLarge ? 'text-2xl md:text-3xl text-white' : 'text-xl md:text-2xl text-foreground'} font-semibold mb-3 group-hover:text-primary transition-colors duration-300`}>
+          <h3 className={`${isLarge ? 'text-2xl md:text-3xl text-black' : 'text-xl md:text-2xl text-foreground'} font-semibold mb-3 group-hover:text-primary transition-colors duration-300`}>
             {service.title}
           </h3>
 
           {/* Description */}
-          <p className={`${isLarge ? 'text-base md:text-lg text-white/80' : 'text-sm md:text-base text-muted-foreground'} leading-relaxed flex-gro    w whitespace-pre-line`}>
+          <p className={`${isLarge ? 'text-base md:text-lg text-black/100' : 'text-sm md:text-base text-muted-foreground'} leading-relaxed flex-grow whitespace-pre-line`}>
             {service.description}
           </p>
         </div>
