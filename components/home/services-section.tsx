@@ -9,10 +9,7 @@ const services = [
     title: "QuintaEsencia",
     description: "QuintaEsencia es la conexión con el mensaje que tu alma necesita escuchar.",
     icon: (
-      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
-        <rect x="6" y="2" width="28" height="36" rx="2" />
-        <text x="20" y="25" fontSize="11" fontWeight="700" fill="currentColor" textAnchor="middle" fontFamily="Georgia, serif" fontStyle="italic">5E</text>
-      </svg>
+      <img src="/images/flor5esencia-removebg-preview.png" alt="Logo Quinta Esencia" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
     ),
     size: "large"
   },

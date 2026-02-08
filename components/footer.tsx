@@ -22,10 +22,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="inline-flex items-center gap-2 group">
-              <Sparkles className="h-6 w-6 text-primary transition-transform group-hover:rotate-12" />
-              <span className="text-xl font-semibold tracking-wide text-foreground">
-                QuintaEsencia
-              </span>
+              <img src="/images/logo5esencia.png" alt="Logo Quinta Esencia" className="h-25 w-auto" />
             </Link>
             <p className="mt-4 max-w-sm text-base leading-relaxed text-muted-foreground">
               Descubrí un mundo de posibilidades a través del Tarot y la Numerología.

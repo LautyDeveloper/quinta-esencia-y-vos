@@ -20,12 +20,6 @@ const services = [
     description: "Desde la intimidad de tu santuario. La energía trasciende la distancia física para encontrarnos en el plano sutil.",
     delay: 150,
     featured: true // Middle card
-  },
-  {
-    icon: Shield,
-    title: "Refugio de Confianza",
-    description: "Un contenedor energético seguro y confidencial, libre de juicios, para que puedas explorar tus luces y sombras.",
-    delay: 300
   }
 ]
 
@@ -195,7 +189,7 @@ export function PropuestaContent() {
                 <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
                   <div className="space-y-3">
                     <div className="w-14 h-14 rounded-full bg-background/90 backdrop-blur-sm border border-primary/20 flex items-center justify-center mb-3">
-                      <Sparkles className="w-7 h-7 text-primary" />
+                      <img src="/images/flor5esencia-removebg-preview.png" alt="Logo Quinta Esencia" className="rounded-full" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                     </div>
                     <h3 className="text-2xl md:text-3xl font-serif text-foreground">Lectura de Tarot Evolutivo</h3>
                     <p className="text-muted-foreground text-sm md:text-base max-w-md">
