@@ -84,34 +84,34 @@ export function ContactoContent() {
               className="group relative"
             >
               {/* Outer glow ring */}
-              <div className="absolute -inset-3 bg-gradient-to-r from-teal-400/20 via-emerald-500/20 to-teal-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              <div className="absolute -inset-3 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
 
               {/* Decorative corner ornaments */}
-              <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-teal-400/50 rounded-tl-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
-              <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-teal-400/50 rounded-tr-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
-              <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-teal-400/50 rounded-bl-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
-              <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-teal-400/50 rounded-br-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-primary/50 rounded-tl-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-primary/50 rounded-tr-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-primary/50 rounded-bl-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-primary/50 rounded-br-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
 
               {/* Main button */}
-              <div className="relative flex items-center gap-5 px-8 py-6 bg-gradient-to-br from-teal-900/80 via-emerald-900/80 to-teal-950/80 backdrop-blur-xl rounded-2xl border border-teal-500/30 shadow-lg shadow-teal-900/20 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-teal-500/20 group-hover:border-teal-400/50 group-hover:scale-105">
+              <div className="relative flex items-center gap-5 px-8 py-6 bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-950/80 backdrop-blur-xl rounded-2xl border border-primary/30 shadow-lg shadow-primary/20 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/20 group-hover:border-primary/50 group-hover:scale-105">
 
                 {/* Icon container with glow */}
                 <div className="relative">
-                  <div className="absolute inset-0 bg-teal-400/30 rounded-full blur-md group-hover:bg-teal-400/50 transition-all" />
-                  <div className="relative w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-br from-teal-400 to-emerald-500 shadow-lg shadow-teal-500/30">
+                  <div className="absolute inset-0 bg-primary/30 rounded-full blur-md group-hover:bg-primary/50 transition-all" />
+                  <div className="relative w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/30">
                     <WhatsAppIcon className="w-7 h-7 text-white" />
                   </div>
                 </div>
 
                 {/* Text */}
                 <div className="text-left">
-                  <p className="text-sm text-teal-300/80 font-medium">Conectá vía</p>
+                  <p className="text-sm text-primary/80 font-medium">Conectá vía</p>
                   <p className="text-xl font-semibold text-white tracking-wide">WhatsApp</p>
                 </div>
 
                 {/* Arrow indicator */}
                 <div className="ml-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                  <svg className="w-5 h-5 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
