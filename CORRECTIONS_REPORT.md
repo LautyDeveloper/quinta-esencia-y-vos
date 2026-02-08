@@ -64,5 +64,13 @@ A continuación se detallan las correcciones realizadas en el sitio, abarcando o
 | **Metadata** (Layout) | "Quinta Esencia y Tú" | "Quinta Esencia y vos" | Voseo |
 | **Alt Texts** (Varios) | "...tarot y numerología" | "...Tarot y Numerología" | Capitalización |
 | **Alt Texts** (Varios) | "...en tu camino" | "...en tu camino" | (Revisión de tildes/ortografía) |
+| **Estilo Visual** | Paleta Celeste/Azul | Paleta Violeta (Logo) | Identidad de Marca |
 
-*Este informe detalla todas las correcciones realizadas. Se ha verificado que el voseo sea consistente en todo el sitio, incluyendo botones y llamadas a la acción.*
+## Actualización de Identidad Visual (Violetas)
+Se ha reemplazado la paleta de colores anterior (tonos celestes/azules) por la nueva gama de violetas basada en el logo de Quinta Esencia:
+- **Violeta Intenso:** oklch(0.68 0.15 285) - Usado para elementos primarios.
+- **Lavanda Medio:** oklch(0.75 0.12 285) - Usado para acentos y estados hover.
+- **Lavanda Claro:** oklch(0.80 0.10 285) - Usado para bordes y transiciones.
+- **Violeta Pálido:** oklch(0.90 0.05 285) - Usado para fondos sutiles y transparencias.
+
+*Este informe detalla todas las correcciones realizadas. Se ha verificado que el voseo sea consistente en todo el sitio y que la nueva identidad visual se aplique correctamente en todos los componentes.*
