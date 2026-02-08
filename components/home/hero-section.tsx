@@ -87,10 +87,20 @@ export function HeroSection() {
             className={`max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
             Descubrí un mundo de{" "}
-            <span className="text-primary relative">
+            <span className="relative inline-block" style={{ color: '#4A1D96' }}>
               posibilidades
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary/30" viewBox="0 0 200 12" preserveAspectRatio="none">
-                <path d="M0,6 Q50,0 100,6 T200,6" stroke="currentColor" strokeWidth="3" fill="none" />
+              <svg
+                className="absolute -bottom-2 left-0 w-full h-3"
+                viewBox="0 0 200 12"
+                preserveAspectRatio="none"
+                style={{ color: '#4A1D96' }}
+              >
+                <path
+                  d="M0,6 Q50,0 100,6 T200,6"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  fill="none"
+                />
               </svg>
             </span>
           </h1>
