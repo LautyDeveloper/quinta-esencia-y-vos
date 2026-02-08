@@ -7,7 +7,7 @@ import { SITE_URL } from "@/lib/constants"
 import JsonLd from "@/components/json-ld"
 
 export const metadata: Metadata = {
-  title: "Quinta Esencia | Lecturas de Tarot y Numerología en Berazategui",
+  title: "Quinta Esencia | Lecturas de Tarot y Numerología",
   description: "Descubrí tu camino con Quinta Esencia. Ofrecemos lecturas de Tarot evolutivo y Numerología personal en Berazategui y online. ¡Iniciá tu viaje hoy!",
   keywords: ["Tarot", "Numerología", "Berazategui", "lectura de cartas", "autoconocimiento", "crecimiento personal", "Buenos Aires"],
   authors: [{ name: "Quinta Esencia" }],
