@@ -6,7 +6,7 @@ import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
-const _cormorant = Cormorant_Garamond({ 
+const _cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"]
 });
@@ -18,20 +18,7 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   keywords: ['Tarot', 'Numerología', 'crecimiento personal', 'espiritualidad', 'autoconocimiento'],
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
+    icon: '/images/flor5esencia-removebg-preview.png',
     apple: '/apple-icon.png',
   },
 }

@@ -49,12 +49,12 @@ export default function HomePage() {
     "email": "quintaesenciayvos@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Berazategui",
+      "addressLocality": "Capital Federal",
       "addressRegion": "Buenos Aires",
       "addressCountry": "AR"
     },
     "sameAs": [
-      "https://instagram.com/quintaesenciayvos"
+      "https://www.instagram.com/5esenciayvos?igsh=MWhxYjEzbmY0dGw4"
     ]
   }
 
